@@ -17,11 +17,11 @@ $very-light-gray: hsl(0, 0%, 98%);
 
 body {
   font-size: 15px;
+  background-color: $very-light-gray;
 }
 
 main {
   margin: 5rem 2.5rem;
-  background-color: $very-light-gray;
 }
 
 .header {
@@ -80,6 +80,47 @@ main {
     }
     &--image {
       align-self: end;
+    }
+  }
+}
+
+footer {
+  margin: 0 0 2rem;
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main {
+    max-width: 1200px;
+    margin-bottom: 1rem;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      max-width: 500px;
+    }
+  }
+
+  .content {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    .card {
+      max-width: 300px;
+      max-height: 200px;
     }
   }
 }
