@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor | Four Card Section | Flex coding challenge solution](https://www.frontendmentor.io/solutions/four-card-feature-section-UQmkxy8r25)
+- Live Site URL: [Frontend Mentor | Four card feature section](https://fm-beginner-four-card.vercel.app/)
 
 ## My process
 
