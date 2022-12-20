@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter";
+  font-weight: 400;
+}
+
+body {
+  font-size: 15px;
+  background-color: hsl(233deg, 47%, 7%);
+  height: 100vh;
+  color: hsl(0deg, 0%, 100%);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-rows: 1.9fr 0.1fr;
+}
+
+main {
+  margin: 1rem;
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(244deg, 38%, 16%);
+  max-width: 380px;
+  border-radius: 1rem;
+}
+
+.img-wrap {
+  position: relative;
+}
+.img-wrap .overlay {
+  background-color: hsl(277deg, 64%, 61%);
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  position: absolute;
+  opacity: 0.75;
+  mix-blend-mode: multiply;
+}
+.img-wrap img {
+  display: flex;
+  width: 100%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.content {
+  padding: 2rem;
+  text-align: center;
+}
+.content .content-desc {
+  margin-bottom: 1.5rem;
+}
+.content .content-desc h1 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 2rem;
+}
+.content .content-desc h1 .purple {
+  color: hsl(277deg, 64%, 61%);
+  font-weight: 700;
+}
+.content .content-desc p {
+  color: hsla(0deg, 0%, 100%, 0.75);
+  line-height: 1.625;
+  font-size: 1.1rem;
+  margin: 1.5rem 0;
+}
+
+.stats ul {
+  display: grid;
+  gap: 2rem;
+  list-style-type: none;
+}
+.stats ul .stats-num {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.stats ul .stats-desc {
+  text-transform: uppercase;
+  font-family: "Lexend Deca";
+  color: hsla(0deg, 0%, 100%, 0.6);
+  letter-spacing: 2px;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .img-wrap img, .img-wrap .overlay {
+    border-top-left-radius: 0;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1200px;
+  }
+  .img-wrap {
+    order: 2;
+  }
+  .img-wrap img {
+    display: flex;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+  }
+  .content {
+    order: 1;
+    display: grid;
+    padding: 4rem;
+    text-align: left;
+    align-content: space-around;
+  }
+  .content .stats ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

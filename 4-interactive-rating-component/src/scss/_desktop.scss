@@ -1,0 +1,19 @@
+@media screen and (min-width: 700px) {
+  body {
+    align-items: center;
+  }
+  
+  main {
+    max-width: 30vh;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    align-items: center;
+  }
+
+  main {
+    max-width: 50vh;
+  }
+}

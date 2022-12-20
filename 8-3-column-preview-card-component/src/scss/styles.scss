@@ -1,0 +1,128 @@
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$very-dark-cyan: hsl(179, 100%, 13%);
+$transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+$very-light-gray: hsl(0, 0%, 95%);
+
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+%button-hover {
+  color: $very-light-gray;
+  border: 2px solid $very-light-gray;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Lexend Deca";
+  font-weight: 400;
+}
+
+body {
+  background-color: $very-light-gray;
+  // height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+main {
+  margin: 2rem;
+  display: grid;
+
+  .card {
+    max-width: 350px;
+    padding: 3rem;
+
+    h1 {
+      font-family: "Big Shoulders Display";
+      font-weight: 700;
+      font-size: 2rem;
+      margin: 2rem 0;
+      text-transform: uppercase;
+      color: $very-light-gray;
+    }
+
+    p {
+      margin: 2rem 0 5rem;
+      color: $transparent-white-paragraphs;
+      line-height: 1.625;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: $very-light-gray;
+      border: none;
+      padding: 1rem 2.5rem;
+      border-radius: 2rem;
+      font-size: 1rem;
+      border: 2px solid $very-light-gray;
+    }
+  }
+
+  .sedan {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    background-color: $bright-orange;
+
+    button {
+      color: $bright-orange;
+
+      &:hover {
+        @extend %button-hover;
+        background-color: $bright-orange;
+      }
+    }
+  }
+
+  .suv {
+    background-color: $dark-cyan;
+
+    button {
+      color: $dark-cyan;
+
+      &:hover {
+        @extend %button-hover;
+        background-color: $dark-cyan;
+      }
+    }
+  }
+
+  .luxury {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    background-color: $very-dark-cyan;
+
+    button {
+      color: $very-dark-cyan;
+
+      &:hover {
+        @extend %button-hover;
+        background-color: $very-dark-cyan;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    height: 100vh;
+  }
+
+  main {
+    max-width: 1000px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .sedan {
+    border-top-right-radius: 0 !important;
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  .luxury {
+    border-top-right-radius: 0.5rem;
+    border-bottom-left-radius: 0 !important;
+  }
+}

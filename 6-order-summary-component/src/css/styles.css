@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Red Hat Display" !important;
+  font-weight: 500;
+  background-color: hsl(225deg, 100%, 94%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+body img.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+}
+
+main {
+  margin: 1rem;
+  background-color: white;
+  border-radius: 1rem;
+  max-width: 400px;
+}
+main .img-wrapper img {
+  width: 100%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+main .content {
+  padding: 2rem;
+  text-align: center;
+}
+main .content .content-desc h1 {
+  font-weight: 900;
+}
+main .content .content-desc p {
+  margin: 1rem;
+  color: hsl(224deg, 23%, 55%);
+  line-height: 1.625;
+}
+main .content .content-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(225deg, 100%, 98%);
+  padding: 1.2rem 1rem;
+  border-radius: 1rem;
+}
+main .content .content-price .price-desc {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  line-height: 1.5;
+}
+main .content .content-price .price-desc p {
+  font-weight: 700;
+}
+main .content .content-price .price-desc p .price {
+  font-weight: 500;
+  color: hsl(224deg, 23%, 55%);
+}
+main .content .content-price .price-desc img {
+  display: flex;
+}
+main .content .content-price .price-button a {
+  color: hsl(245deg, 75%, 52%);
+  font-weight: 700;
+}
+main .content .content-price .price-button a:hover, main .content .content-price .price-button a:active {
+  color: hsl(245deg, 50%, 60%);
+  text-decoration: none;
+}
+main .content .content-button {
+  margin-top: 1rem;
+  display: grid;
+}
+main .content .content-button button {
+  font-family: "Red Hat Display";
+}
+main .content .content-button .process {
+  margin: 1rem 0 1.5rem;
+  border: none;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: hsl(245deg, 75%, 52%);
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-size: 1rem;
+  box-shadow: 0 15px 15px hsl(225deg, 100%, 94%);
+}
+main .content .content-button .process:hover, main .content .content-button .process:active {
+  background-color: hsl(245deg, 50%, 60%);
+}
+main .content .content-button .cancel {
+  border: none;
+  background-color: transparent;
+  color: hsl(224deg, 23%, 55%);
+  font-size: 1rem;
+  font-weight: 700;
+}
+main .content .content-button .cancel:hover, main .content .content-button .cancel:active {
+  color: hsl(223deg, 47%, 23%);
+}
+
+/*# sourceMappingURL=styles.css.map */

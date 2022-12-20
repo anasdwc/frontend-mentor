@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+.thanks .thanks-content p, main .rating-content-desc p {
+  color: hsl(217deg, 12%, 63%);
+  line-height: 1.625;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
+body {
+  font-family: "Overpass";
+  font-weight: 400;
+  font-size: 15px;
+  background-color: hsl(216deg, 12%, 8%);
+  color: hsl(0deg, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+main {
+  background: radial-gradient(at top, hsl(213deg, 19%, 20%) 0%, hsl(213deg, 19%, 18%) 100%);
+  border-radius: 1.5rem;
+  padding: 2rem 1.5rem;
+  margin-bottom: 1rem;
+}
+main .rating-icon {
+  background-color: hsl(213deg, 20%, 23%);
+  padding: 0.8rem;
+  display: inline-flex;
+  border-radius: 50%;
+}
+main .rating-content-desc h1 {
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+main .rating-content-desc p {
+  margin-bottom: 1.5rem;
+}
+main .rating-content-radio {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+main .rating-content-radio .radio {
+  display: grid;
+  grid-template-columns: 0 1fr;
+  justify-items: center;
+}
+main .rating-content-radio .radio label {
+  background-color: hsl(213deg, 20%, 23%);
+  padding: 1rem;
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+main .rating-content-radio .radio input {
+  visibility: hidden;
+}
+main .rating-content-radio .radio input:hover + label {
+  background-color: hsl(216deg, 12%, 54%);
+}
+main .rating-content-radio .radio input:checked + label {
+  background-color: hsl(25deg, 97%, 53%);
+}
+main .rating-content-radio .radio label {
+  cursor: pointer;
+}
+main .rating-content-button button {
+  margin-top: 1.5rem;
+  width: 100%;
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 0;
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(25deg, 97%, 53%);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+  font-family: "Overpass";
+}
+
+.thanks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.thanks .thanks-img p {
+  margin-top: 1.5rem;
+  color: hsl(25deg, 97%, 53%);
+  background-color: hsl(216deg, 12%, 8%);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border: none;
+  font-weight: 400;
+}
+.thanks .thanks-content {
+  text-align: center;
+}
+.thanks .thanks-content h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+.thanks .thanks-content p {
+  margin-bottom: 0;
+}
+
+.none {
+  display: none;
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    align-items: center;
+  }
+  main {
+    max-width: 30vh;
+  }
+}
+@media screen and (min-width: 1000px) {
+  body {
+    align-items: center;
+  }
+  main {
+    max-width: 50vh;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

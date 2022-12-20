@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+$dark-cyan: hsl(185, 75%, 39%);
+$very-dark-desaturated-blue: hsl(229, 23%, 23%);
+$dark-grayish-blue: hsl(227, 10%, 46%);
+$dark-gray: hsl(0, 0%, 59%);
+
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-family: "Kumbh Sans";
+  font-weight: 400;
+}
+
+body {
+  background-color: $dark-cyan;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../images/bg-pattern-top.svg),
+    url(../../images/bg-pattern-bottom.svg);
+  background-position: top -380px left -110px, bottom -350px right -150px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+main {
+  background-color: white;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  max-width: 300px;
+}
+
+.header {
+  position: relative;
+
+  & > img {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .avatar {
+    img {
+      position: absolute;
+      border-radius: 50%;
+      border: 8px solid white;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      bottom: -48px;
+    }
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 1.5rem;
+
+  &__content {
+    padding: 1.5rem;
+    text-align: center;
+
+    h1 {
+      padding-top: 2rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: $very-dark-desaturated-blue;
+
+      .card__content__age {
+        padding-left: 0.2rem;
+        font-weight: 400;
+        color: $dark-grayish-blue;
+      }
+    }
+
+    p {
+      font-size: 0.9rem;
+      padding-top: 0.5rem;
+      color: $dark-grayish-blue;
+      font-weight: 400;
+    }
+  }
+
+  &__stats {
+    width: 100%;
+    border-top: 1px solid $dark-gray;
+    padding-top: 1.5rem;
+    text-align: center;
+
+    ul {
+      display: flex;
+      list-style-type: none;
+      gap: 1rem;
+      justify-content: space-evenly;
+
+      li {
+        font-size: 0.6rem;
+        letter-spacing: 1px;
+        color: $dark-grayish-blue;
+        font-weight: 700;
+      }
+    }
+
+    &__num {
+      color: $very-dark-desaturated-blue;
+      font-weight: 700;
+      line-height: 1.625;
+    }
+  }
+}

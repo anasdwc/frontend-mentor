@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Kumbh Sans";
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 12px;
+  background: linear-gradient(hsl(273deg, 75%, 66%), hsl(240deg, 73%, 65%));
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 10rem 0 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  background-color: white;
+  margin: 1rem;
+  padding: 6rem 2rem 3rem;
+  border-radius: 2rem;
+}
+
+a {
+  color: hsl(14deg, 88%, 65%) !important;
+  letter-spacing: 1px;
+}
+
+.illustration {
+  position: relative;
+}
+.illustration .illustration-bg, .illustration .illustration-box, .illustration .illustration-woman {
+  position: absolute;
+  margin: auto;
+}
+.illustration-woman {
+  width: 100%;
+  height: 200px;
+  bottom: 10px;
+}
+.illustration-box {
+  display: none;
+}
+.illustration-bg {
+  width: 85%;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+}
+
+.content h1 {
+  padding: 3rem 0 1.5rem;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: hsl(238deg, 29%, 16%);
+}
+.content ul {
+  list-style-type: none;
+}
+.content ul li {
+  display: grid;
+  padding: 1rem 0;
+  border-bottom: 2px solid hsl(240deg, 5%, 91%);
+  color: hsl(240deg, 6%, 50%);
+  min-width: 316px;
+}
+.content ul li.active img {
+  rotate: 180deg;
+}
+.content ul li.active h2 {
+  font-weight: 700;
+  color: hsl(238deg, 29%, 16%);
+}
+.content ul li.active p {
+  display: block;
+}
+.content ul li .item-head {
+  display: grid;
+  grid-template-columns: 1.9fr 0.1fr;
+}
+.content ul li .item-head img {
+  width: 100%;
+  align-self: center;
+  justify-self: center;
+}
+.content ul li .item-head h2 {
+  font-size: 0.9rem;
+}
+.content ul li:hover {
+  color: hsl(14deg, 88%, 65%);
+  cursor: pointer;
+}
+.content ul li p {
+  padding-right: 2.5rem;
+  padding-top: 0.5rem;
+  font-size: 0.8rem;
+  line-height: 1.625;
+  display: none;
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    min-height: 100vh;
+    height: auto;
+    margin: 0 0 5rem;
+    padding: 0;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2rem;
+    padding: 0;
+    max-width: 1000px;
+  }
+  main .content h1 {
+    padding-top: 0;
+  }
+  .illustration {
+    height: 100%;
+  }
+  .illustration .overflow {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+  }
+  .illustration-woman {
+    width: 110%;
+    height: 400px;
+    z-index: 1;
+    bottom: 0;
+    top: 0;
+    right: 40px;
+  }
+  .illustration-box {
+    overflow-block: visible;
+    display: block;
+    z-index: 2;
+    top: 105px;
+    bottom: 0;
+    left: -95px;
+  }
+  .illustration-bg {
+    width: 200%;
+    top: -90px;
+    bottom: 0;
+    left: -575px;
+  }
+  .content {
+    padding: 4rem 4rem 6rem 2rem;
+  }
+  .content h1 {
+    text-align: left;
+  }
+  .content ul li {
+    min-width: 405px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

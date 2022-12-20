@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+main .luxury button:hover, main .suv button:hover, main .sedan button:hover {
+  color: hsl(0deg, 0%, 95%);
+  border: 2px solid hsl(0deg, 0%, 95%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Lexend Deca";
+  font-weight: 400;
+}
+
+body {
+  background-color: hsl(0deg, 0%, 95%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+main {
+  margin: 2rem;
+  display: grid;
+}
+main .card {
+  max-width: 350px;
+  padding: 3rem;
+}
+main .card h1 {
+  font-family: "Big Shoulders Display";
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 2rem 0;
+  text-transform: uppercase;
+  color: hsl(0deg, 0%, 95%);
+}
+main .card p {
+  margin: 2rem 0 5rem;
+  color: hsla(0deg, 0%, 100%, 0.75);
+  line-height: 1.625;
+  font-size: 1rem;
+}
+main .card button {
+  background-color: hsl(0deg, 0%, 95%);
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  border: 2px solid hsl(0deg, 0%, 95%);
+}
+main .sedan {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  background-color: hsl(31deg, 77%, 52%);
+}
+main .sedan button {
+  color: hsl(31deg, 77%, 52%);
+}
+main .sedan button:hover {
+  background-color: hsl(31deg, 77%, 52%);
+}
+main .suv {
+  background-color: hsl(184deg, 100%, 22%);
+}
+main .suv button {
+  color: hsl(184deg, 100%, 22%);
+}
+main .suv button:hover {
+  background-color: hsl(184deg, 100%, 22%);
+}
+main .luxury {
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  background-color: hsl(179deg, 100%, 13%);
+}
+main .luxury button {
+  color: hsl(179deg, 100%, 13%);
+}
+main .luxury button:hover {
+  background-color: hsl(179deg, 100%, 13%);
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    height: 100vh;
+  }
+  main {
+    max-width: 1000px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .sedan {
+    border-top-right-radius: 0 !important;
+    border-bottom-left-radius: 0.5rem;
+  }
+  .luxury {
+    border-top-right-radius: 0.5rem;
+    border-bottom-left-radius: 0 !important;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

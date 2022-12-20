@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+$white: hsl(0, 0%, 100%);
+$primary-soft-blue: hsl(215, 51%, 70%);
+$primary-cyan: hsl(178, 100%, 50%);
+$main-very-dark-blue: hsl(217, 54%, 11%);
+$card-very-dark-blue: hsl(216, 50%, 16%);
+$line-very-dark-blue: hsl(215, 32%, 27%);
+
+%center-icon {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+%overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+%link {
+  text-decoration: none;
+  color: $white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 18px;
+  font-family: 'Outfit';
+  font-weight: 400;
+  background-color: $main-very-dark-blue;
+  color: $white;
+
+  // make center
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main {
+  margin: 1.5rem;
+  background-color: $card-very-dark-blue;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  
+  // Add box shadow
+  box-shadow: 0 10px 40px 10px hsl(216deg 55% 5%);
+
+  .nft-img {
+    position: relative;
+    width: 100%;
+    display: flex;
+
+    img {
+      width: 100%;
+      border-radius: 1rem;
+    }
+
+    .overlay {
+      cursor: pointer;
+    }
+
+    .overlay-bg {
+      background-color: $primary-cyan;
+      @extend %overlay;
+      opacity: 0;
+    }
+
+    &:hover .overlay-icon {
+      background: {
+        image: url('../../images/icon-view.svg');
+        repeat: no-repeat;
+        position: center;
+      };
+      @extend %overlay
+    }
+
+    &:hover .overlay-bg {
+      opacity: .5;
+      border-radius: 1rem;
+    }
+  }
+
+  .nft-content {
+    margin-top: 1.5rem;
+
+    .nft-desc {
+      h1 {
+        font-size: 1.625rem;
+        font-weight: 700;
+
+        a {
+          @extend %link;
+
+          &:hover {
+            color: $primary-cyan;
+          }
+        }
+      }
+
+      p {
+        margin: 1rem 0;
+        font-weight: 300;
+        color: $primary-soft-blue;
+      }
+    }
+
+    .nft-price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: .8rem;
+      border-bottom: 2px solid $line-very-dark-blue;
+      margin-bottom: .8rem;
+
+      .price {
+        @extend %center-icon;
+        font-size: 1.1rem;
+        color: $primary-cyan;
+        font-weight: 700;
+      }
+
+      .date {
+        @extend %center-icon;
+        color: $primary-soft-blue;
+        font-weight: 300;
+      }
+    }
+
+    .nft-author {
+      color: $primary-soft-blue;
+      font-weight: 300;
+      @extend %center-icon;
+      font-size: .9rem;
+
+      img {
+        width: 32px;
+        border: 1px solid $white;
+        border-radius: 50%;
+      }
+
+      .author {
+        color: $white;
+
+        a {
+          @extend %link;
+
+          &:hover {
+            color: $primary-cyan;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    align-items: center;
+  }
+  main {
+    width: 300px;
+  }
+}

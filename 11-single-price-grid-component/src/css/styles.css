@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+main .price--subscription p:nth-child(3), main .price--subscription--desc {
+  color: hsl(204deg, 43%, 93%);
+  opacity: 0.8;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Karla";
+}
+
+body {
+  background-color: hsl(204deg, 43%, 93%);
+  font-size: 16px;
+  display: grid;
+  grid-template-rows: 1.75fr 0.25fr;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  margin: 2rem;
+  max-width: 350px;
+}
+main .content {
+  background-color: white;
+  border-radius: 0.25rem 0.25rem 0 0;
+  padding: 2rem;
+}
+main .content h1 {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: hsl(179deg, 62%, 43%);
+}
+main .content--guarantee {
+  color: hsl(71deg, 73%, 54%);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 1.5rem 0;
+}
+main .content--desc {
+  line-height: 1.625;
+  font-size: 0.9rem;
+  color: hsl(218deg, 22%, 67%);
+}
+main .price {
+  background-color: hsl(179deg, 62%, 43%);
+  border-radius: 0 0 0.25rem 0.25rem;
+  display: grid;
+}
+main .price h2 {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: white;
+}
+main .price--subscription {
+  padding: 2rem;
+  display: grid;
+}
+main .price--subscription p:nth-child(2) {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 1.5rem 0 0.5rem;
+}
+main .price--subscription--num {
+  font-weight: 700;
+  color: white;
+  font-size: 2rem;
+}
+main .price--subscription p:nth-child(3) {
+  margin-bottom: 2rem;
+}
+main .price--subscription button {
+  background-color: hsl(71deg, 73%, 54%);
+  color: hsl(204deg, 43%, 93%);
+  border-radius: 0.25rem;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+main .price--reasons {
+  background-color: hsl(179deg, 62%, 47%);
+  padding: 2rem;
+  opacity: 0.8rem;
+}
+main .price--reasons ul {
+  list-style-type: none;
+  padding: 1.5rem 0 0;
+}
+main .price--reasons ul li {
+  color: hsl(204deg, 43%, 93%);
+  opacity: 0.8;
+  padding: 0.25rem 0;
+}
+
+@media screen and (min-width: 1000px) {
+  main {
+    max-width: 680px;
+  }
+  .price {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
