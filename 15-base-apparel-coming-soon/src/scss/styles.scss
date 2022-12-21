@@ -17,6 +17,7 @@ body {
   font-weight: 400;
   background: $linear-1;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .brand {
@@ -113,6 +114,7 @@ body {
     grid-row: 1/3;
     img {
       height: 100%;
+      width: 100%;
       object-fit: cover;
       object-position: top;
     }
