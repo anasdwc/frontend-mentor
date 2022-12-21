@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor | Base Apparel | Grid & Flex coding challenge solution](https://www.frontendmentor.io/solutions/base-apparel-coming-soon-page-dSzGkd2w1U)
+- Live Site URL: [Frontend Mentor | Base Apparel coming soon page](https://fm-beginner-base-apparel.netlify.app/)
 
 ## My process
 
