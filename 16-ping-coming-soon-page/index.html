@@ -1,34 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Ping coming soon page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./src/css/styles.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Ping coming soon page</title>
 
-  We are launching soon!
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="header">
+        <img src="./images/logo.svg" alt="" aria-hidden="true" />
+      </section>
+      <section class="content">
+        <div class="content__header">
+          <h1>We are launching soon!</h1>
+          <p>Subscribe and get notified Notify Me &copy; Copyright</p>
+        </div>
+        <div class="content__button">
+          <form action="">
+            <input type="email" name="email" id="email" />
+            <button type="submit">Notify Me</button>
+          </form>
+        </div>
+        <div class="content__footer">
+          <div class="content__footer__social-media">
+            <div class="icon facebook">
+              <a href="https://facebook.com">
+                <img
+                  src="./images/icon-facebook.svg"
+                  alt="Facebook Social Media"
+                />
+              </a>
+            </div>
+            <div class="icon twitter">
+              <a href="https://twitter.com">
+                <img
+                  src="./images/icon-twitter.svg"
+                  alt="Twitter Social Media"
+                />
+              </a>
+            </div>
+            <div class="icon instagram">
+              <a href="https://instagram.com">
+                <img
+                  src="./images/icon-instagram.svg"
+                  alt="Instagram Social Media"
+                />
+              </a>
+            </div>
+          </div>
+          <p>Ping. All rights reserved.</p>
+        </div>
+      </section>
+    </main>
 
-  Subscribe and get notified
-
-  Notify Me
-
-  &copy; Copyright Ping. All rights reserved.
-
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-</body>
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+          Frontend Mentor
+        </a>
+        . Coded by
+        <a href="#">Your Name Here</a>
+        .
+      </p>
+    </footer>
+  </body>
 </html>
