@@ -1,4 +1,4 @@
-const input = document.querySelector("input#email");
+const input = document.querySelector("input");
 const inputDiv = document.querySelector(".input");
 const buttonEle = document.querySelector("button");
 
@@ -22,7 +22,8 @@ input.addEventListener("change", (e) => {
   input.classList.add("error");
 
   if (!isEmailValid(e.target.value) && errorCount < 1) {
-    inputDiv.appendChild(p);
+    console.log(e.target.parentNode);
+    buttonEle.parentNode.insertBefore(p, buttonEle);
     return;
   }
 
