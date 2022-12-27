@@ -7,18 +7,29 @@ import Content from "./components/Content";
 import image_mobile from "./assets/images/image-web-3-mobile.jpg";
 import logo from "./assets/images/logo.svg";
 import iconMenu from "./assets/images/icon-menu.svg";
+import iconExit from "./assets/images/icon-menu-close.svg";
 import image1 from "./assets/images/image-retro-pcs.jpg";
 import image2 from "./assets/images/image-top-laptops.jpg";
 import image3 from "./assets/images/image-gaming-growth.jpg";
 import Footer from "./components/Footer";
+import { useState } from "react";
 
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const menuHandler = () => {
+    const menu = document.querySelector(".menu");
+    const menuDarken = document.querySelector(".menu-darken");
+    setIsMenuOpen(!isMenuOpen);
+    menu.classList.toggle("expanded");
+    menuDarken.classList.toggle("dark");
+  };
+
   const contentData = [
     {
       id: 1,
-      title: "Is VC Funding Drying Up?",
-      description:
-        "Private funding by VC firms is down 50% YOY. We take a look at what that means.",
+      title: "Reviving Retro PCs",
+      description: "What happens when old PCs are given modern upgrades?",
       image: image1,
     },
     {
@@ -57,7 +68,13 @@ function App() {
 
   return (
     <div className="App">
-      <Header img={logo} brand={logo} icon_menu={iconMenu} />
+      <Header
+        img={logo}
+        brand={logo}
+        icon_menu={isMenuOpen ? iconExit : iconMenu}
+        isMenuOpen={isMenuOpen}
+        menuOnClick={menuHandler}
+      />
       <Hero bannerImg={image_mobile} />
       <main>
         <News data={newsData} />
