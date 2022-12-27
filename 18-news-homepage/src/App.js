@@ -5,6 +5,7 @@ import News from "./components/News";
 import Content from "./components/Content";
 
 import image_mobile from "./assets/images/image-web-3-mobile.jpg";
+import image_desktop from "./assets/images/image-web-3-desktop.jpg";
 import logo from "./assets/images/logo.svg";
 import iconMenu from "./assets/images/icon-menu.svg";
 import iconExit from "./assets/images/icon-menu-close.svg";
@@ -23,6 +24,7 @@ function App() {
     setIsMenuOpen(!isMenuOpen);
     menu.classList.toggle("expanded");
     menuDarken.classList.toggle("dark");
+    document.body.classList.toggle("overflow");
   };
 
   const contentData = [
@@ -75,11 +77,11 @@ function App() {
         isMenuOpen={isMenuOpen}
         menuOnClick={menuHandler}
       />
-      <Hero bannerImg={image_mobile} />
       <main>
+        <Hero bannerImg={image_mobile} bannerDesktop={image_desktop} />
         <News data={newsData} />
-        <Content data={contentData} />
       </main>
+      <Content data={contentData} />
       <Footer />
     </div>
   );

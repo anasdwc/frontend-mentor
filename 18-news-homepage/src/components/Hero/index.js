@@ -1,8 +1,12 @@
-function Hero({ bannerImg }) {
+function Hero({ bannerImg, bannerDesktop }) {
   return (
     <div className="hero">
       <div className="hero__banner">
-        <img src={bannerImg} alt="" aria-hidden="true" />
+        <picture>
+          <source media="(min-width: 1000px)" srcSet={bannerDesktop} />
+          <source srcSet={bannerImg} />
+          <img src={bannerImg} alt="" aria-hidden="true" />
+        </picture>
       </div>
       <div className="hero__body">
         <h1>The Bright Future of Web 3.0?</h1>
