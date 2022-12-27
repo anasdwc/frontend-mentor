@@ -1,0 +1,164 @@
+$violet: hsl(257, 40%, 49%);
+$soft-magenta: hsl(300, 69%, 71%);
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Open Sans";
+  font-weight: 400;
+  background-image: url(../../images/bg-mobile.svg);
+  background-color: $violet;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 2rem;
+  font-size: 16px;
+  color: white;
+}
+
+header {
+  img {
+    width: 8rem;
+  }
+}
+
+.content {
+  &__img {
+    margin: 4rem 0;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__body {
+    text-align: center;
+
+    h1 {
+      font-family: "Poppins";
+      font-weight: 600;
+    }
+
+    p {
+      font-family: "Open Sans";
+      font-weight: 400;
+      line-height: 1.625;
+      font-size: 1rem;
+      margin: 1rem 0;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    margin: 2rem 0 4rem;
+    button {
+      display: inherit;
+      width: 80%;
+      margin: auto;
+      border-radius: 2rem;
+      padding: 1rem;
+      border: none;
+      color: $violet;
+      box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.3);
+      &:hover {
+        background-color: $soft-magenta;
+      }
+    }
+  }
+}
+
+footer {
+  margin: 1rem 0;
+
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: $soft-magenta;
+  }
+
+  .social-media {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1rem 0;
+    .icon {
+      display: flex;
+      border: 1px solid white;
+      padding: 0.5rem;
+      border-radius: 50%;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      &:hover {
+        border-color: $soft-magenta;
+        & svg {
+          fill: $soft-magenta;
+        }
+      }
+      svg {
+        width: 16px;
+        fill: white;
+      }
+    }
+  }
+}
+
+.ionicon {
+  fill: red;
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    background-image: url(../../images/bg-mobile.svg);
+    background-size: cover;
+    margin: 3rem 8rem;
+    max-width: 1200px;
+  }
+
+  header {
+    img {
+      width: 12rem;
+    }
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1rem;
+
+    &__body {
+      text-align: left;
+      align-items: center;
+      padding: 0 2rem;
+
+      h1 {
+        font-size: 2.5rem;
+      }
+      p {
+        margin-right: 1rem;
+      }
+    }
+
+    &__button {
+      max-width: 40%;
+      button {
+        margin: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  footer {
+    .social-media {
+      justify-content: end;
+      margin-right: 2rem;
+    }
+  }
+}
