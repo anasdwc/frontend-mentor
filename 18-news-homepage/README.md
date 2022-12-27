@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: https://fm-junior-news-home.netlify.app/
+- Solution URL: [Frontend Mentor | News Homepage | React coding challenge solution](https://www.frontendmentor.io/solutions/news-homepage-WR7ulS6IQB)
+- Live Site URL: [News Homepage](https://fm-junior-news-home.netlify.app/)
 
 ## My process
 
