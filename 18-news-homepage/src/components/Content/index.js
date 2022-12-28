@@ -10,6 +10,7 @@ function Content({ data }) {
           title={item.title}
           description={item.description}
           thumbnail={item.image}
+          altThumb={item.title}
         />
       ))}
     </div>
