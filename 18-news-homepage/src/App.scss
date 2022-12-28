@@ -63,7 +63,7 @@ header {
         font-weight: 400;
         font-size: 1.2rem;
         &:hover {
-          color: $soft-red;
+          color: $soft-orange;
         }
       }
     }
@@ -115,6 +115,9 @@ header {
     letter-spacing: 3px;
     font-weight: 600;
     cursor: pointer;
+    &:hover {
+      background-color: $very-dark-blue;
+    }
   }
 }
 
@@ -129,6 +132,16 @@ header {
     font-weight: 700;
     font-size: 2rem;
     color: $soft-orange;
+  }
+
+  h3 {
+    a {
+      color: $off-white;
+      text-decoration: none;
+      &:hover {
+        color: $soft-orange;
+      }
+    }
   }
 
   .news-item {
@@ -154,6 +167,13 @@ header {
     &__body {
       h3 {
         margin: 0;
+        a {
+          color: $very-dark-blue;
+          text-decoration: none;
+          &:hover {
+            color: $soft-red;
+          }
+        }
       }
       .number {
         display: block;
@@ -215,7 +235,6 @@ footer {
 
   main {
     display: flex;
-    // grid-template-columns: 70% 30%;
     gap: 2rem;
     margin: 2rem 0 3rem;
 

@@ -7,7 +7,7 @@ function ContentItem({ thumbnail, altThumb, number, title, description }) {
       <div className="content-item__body">
         <h3>
           <span className="number">{number}</span>
-          {title}
+          <a href="#content">{title}</a>
         </h3>
         <p>{description}</p>
       </div>

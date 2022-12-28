@@ -1,7 +1,9 @@
 function NewItem({ title, description }) {
   return (
     <div className="news-item">
-      <h3>{title}</h3>
+      <h3>
+        <a href="#new">{title}</a>
+      </h3>
       <p>{description}</p>
     </div>
   );
