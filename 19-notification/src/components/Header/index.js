@@ -1,10 +1,10 @@
-function Header({ read }) {
+function Header({ read, onMarkClick }) {
   return (
     <header>
       <h1>
         Notifications <span className="no-read">{read}</span>{" "}
       </h1>
-      <button>Mark all as read</button>
+      <button onClick={onMarkClick}>Mark all as read</button>
     </header>
   );
 }

@@ -10,6 +10,7 @@ import avatarJacob from "./assets/images/avatar-jacob-thompson.webp";
 import avatarKim from "./assets/images/avatar-kimberly-smith.webp";
 import avatarNathan from "./assets/images/avatar-nathan-peterson.webp";
 import Notifications from "./components/Notifications";
+import { useState } from "react";
 
 function App() {
   const notificationsData = [
@@ -79,12 +80,25 @@ function App() {
     },
   ];
 
-  let countRead = notificationsData.filter((item) => !item.isRead).length;
+  const [notifData, setNotifData] = useState(notificationsData);
+
+  let unread = notifData.filter((item) => !item.isRead).length;
+
+  const readHanler = () => {
+    const newNotif = notifData.map((item) => {
+      if (!item.isRead) {
+        item.isRead = true;
+        return item;
+      }
+      return item;
+    });
+    setNotifData(newNotif);
+  };
 
   return (
     <div className="App">
-      <Header read={countRead} />
-      <Notifications data={notificationsData} />
+      <Header read={unread} onMarkClick={readHanler} />
+      <Notifications data={notifData} />
     </div>
   );
 }

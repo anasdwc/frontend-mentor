@@ -4,8 +4,13 @@ function StatusNotif({ status, userName, comment, isRead, time }) {
       return (
         <>
           <p className="">
-            <span className="userName">{userName}</span> reacted to your recent
-            post <span className="comment">{comment}</span>{" "}
+            <a href="#user" className="userName">
+              {userName}
+            </a>{" "}
+            reacted to your recent post{" "}
+            <a href="#react" className="comment">
+              {comment}
+            </a>{" "}
             {!isRead ? <div className="unread"></div> : ""}
           </p>
           <p>{time} ago</p>
@@ -15,8 +20,10 @@ function StatusNotif({ status, userName, comment, isRead, time }) {
       return (
         <>
           <p>
-            <span className="userName">{userName}</span> followed you{" "}
-            <span className="comment">{comment}</span>
+            <a href="#user" className="userName">
+              {userName}
+            </a>{" "}
+            followed you <span className="comment">{comment}</span>
             {!isRead ? <div className="unread"></div> : ""}
           </p>
           <p>{time} ago</p>
@@ -26,8 +33,11 @@ function StatusNotif({ status, userName, comment, isRead, time }) {
       return (
         <>
           <p>
-            <span className="userName">{userName}</span> has joined your group{" "}
-            <a className="comment" href="#club">
+            <a href="#user" className="userName">
+              {userName}
+            </a>{" "}
+            has joined your group{" "}
+            <a className="comment club" href="#club">
               {comment}
             </a>
             {!isRead ? <div className="unread"></div> : ""}
@@ -40,8 +50,10 @@ function StatusNotif({ status, userName, comment, isRead, time }) {
         <>
           <div className="dm">
             <p>
-              <span className="userName">{userName}</span> sent your a private
-              message
+              <a href="#user" className="userName">
+                {userName}
+              </a>{" "}
+              sent you a private message
             </p>
             <p>{time} ago</p>
             <div className="dm-body">
@@ -56,8 +68,10 @@ function StatusNotif({ status, userName, comment, isRead, time }) {
         <>
           <div className="media">
             <p>
-              <span className="userName">{userName}</span> commented on your
-              picture{" "}
+              <a href="#user" className="userName">
+                {userName}
+              </a>{" "}
+              commented on your picture{" "}
             </p>
             <img src={comment} alt="" aria-hidden="true" />
             {!isRead ? <div className="unread"></div> : ""}
@@ -69,8 +83,11 @@ function StatusNotif({ status, userName, comment, isRead, time }) {
       return (
         <>
           <p>
-            <span className="userName">{userName}</span> left the group{" "}
-            <a className="comment" href="#club">
+            <a href="#user" className="userName">
+              {userName}
+            </a>{" "}
+            left the group{" "}
+            <a className="comment club" href="#club">
               {comment}
             </a>
             {!isRead ? <div className="unread"></div> : ""}
