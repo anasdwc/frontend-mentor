@@ -21,9 +21,6 @@ body {
 .App {
   margin: 2rem 1rem;
   max-width: 600px;
-  background-color: $White;
-  padding: 2rem 2rem 1rem;
-  border-radius: 1rem;
 }
 
 header {
@@ -141,10 +138,29 @@ header {
   }
 }
 
+footer {
+  margin: 1rem 0;
+  text-align: center;
+  font-size: 0.8rem;
+  a {
+    color: $Blue;
+    &:hover {
+      color: $Red;
+    }
+  }
+}
+
 @media screen and (min-width: 1000px) {
   .App {
     margin: 2rem auto;
   }
+
+  main {
+    background-color: $White;
+    padding: 2rem 2rem 1rem;
+    border-radius: 1rem;
+  }
+
   .notification-item {
     grid-template-columns: 10% 90%;
     img {

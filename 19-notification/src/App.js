@@ -11,6 +11,7 @@ import avatarKim from "./assets/images/avatar-kimberly-smith.webp";
 import avatarNathan from "./assets/images/avatar-nathan-peterson.webp";
 import Notifications from "./components/Notifications";
 import { useState } from "react";
+import Footer from "./components/Footer";
 
 function App() {
   const notificationsData = [
@@ -97,8 +98,11 @@ function App() {
 
   return (
     <div className="App">
-      <Header read={unread} onMarkClick={readHanler} />
-      <Notifications data={notifData} />
+      <main>
+        <Header read={unread} onMarkClick={readHanler} />
+        <Notifications data={notifData} />
+      </main>
+      <Footer />
     </div>
   );
 }
