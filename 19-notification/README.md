@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor | Notification | React coding challenge solution](https://www.frontendmentor.io/solutions/notifications-page-8ngSDF4N9E)
+- Live Site URL: [Frontend Mentor | Notifications page](https://fm-junior-notification.netlify.app/)
 
 ## My process
 
