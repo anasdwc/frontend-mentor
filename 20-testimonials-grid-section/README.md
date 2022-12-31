@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor | Testimonials Grid | React coding challenge solution](https://www.frontendmentor.io/solutions/testimonials-grid-section-yJ_ilS6AsX)
+- Live Site URL: [Frontend Mentor | [Challenge Name Here]](https://fm-junior-testimonials.netlify.app/)
 
 ## My process
 
