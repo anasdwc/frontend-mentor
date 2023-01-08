@@ -1,10 +1,18 @@
-function InputItem({ inputName, inputType, inputPlaceholder }) {
+function InputItem({
+  inputName,
+  inputType,
+  inputPlaceholder,
+  handleChange,
+  value,
+}) {
   return (
     <input
       type={inputType}
       id={inputName}
       name={inputName}
       placeholder={inputPlaceholder}
+      onChange={handleChange}
+      value={value}
     />
   );
 }
@@ -15,6 +23,8 @@ function FormItem({
   inputName,
   inputPlaceholder,
   totalInputItem = 1,
+  handleChange,
+  value,
 }) {
   const inputEle = [];
 
@@ -30,6 +40,8 @@ function FormItem({
             ? inputPlaceholder[i]
             : inputPlaceholder
         }
+        handleChange={handleChange}
+        value={value}
       />
     );
     totalInputItem--;

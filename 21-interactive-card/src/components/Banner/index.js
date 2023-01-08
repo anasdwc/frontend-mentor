@@ -1,4 +1,12 @@
-function Banner({ bgDesktop, bgMobile, cardBack, cardFront, cardLogo }) {
+function Banner({
+  bgDesktop,
+  bgMobile,
+  cardBack,
+  cardFront,
+  cardLogo,
+  cardName,
+  cardNum,
+}) {
   return (
     <header>
       <div className="banner__bg">
@@ -18,8 +26,8 @@ function Banner({ bgDesktop, bgMobile, cardBack, cardFront, cardLogo }) {
               aria-hidden="true"
             />
             <div className="banner__bg__card__front__input">
-              <h1 className="card-number">0000 0000 0000 0000</h1>
-              <p>JANE APPLESEED</p>
+              <h1 className="card-number">{cardNum.join("")}</h1>
+              <p>{cardName ? cardName : "Jane Appleseed"}</p>
               <p>00/00</p>
             </div>
           </div>

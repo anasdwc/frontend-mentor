@@ -150,6 +150,7 @@ body {
           p {
             color: $light-grayish-violet;
             font-size: 0.8rem;
+            text-transform: uppercase;
             &:last-child {
               justify-self: flex-end;
             }

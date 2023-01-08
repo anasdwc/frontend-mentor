@@ -1,22 +1,34 @@
 import FormItem from "./FormItem";
 
-function Form() {
+function Form({
+  handleConfirm,
+  cardName,
+  handleCardName,
+  cardNum,
+  handleCardNum,
+}) {
+  const handleForm = (e) => e.preventDefault();
+
   return (
     <div className="form">
-      <form>
+      <form onClick={handleForm}>
         <FormItem
           key={1}
           labelValue="Cardholder Name"
+          value={cardName}
           inputName={["name"]}
           inputType="text"
           inputPlaceholder="e.g. Jane Appleseed"
+          handleChange={handleCardName}
         />
         <FormItem
           key={2}
           labelValue="Card Number"
           inputName="cardNumber"
-          inputType="number"
+          inputType="text"
           inputPlaceholder="e.g. 1234 5678 9123 0000"
+          value={cardNum}
+          handleChange={handleCardNum}
         />
         <div className="form__column">
           <FormItem
@@ -35,7 +47,7 @@ function Form() {
             inputPlaceholder="e.g. 123"
           />
         </div>
-        <button>Confirm</button>
+        <button onClick={handleConfirm}>Confirm</button>
       </form>
     </div>
   );
