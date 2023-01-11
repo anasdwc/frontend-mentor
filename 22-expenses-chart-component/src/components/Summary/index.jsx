@@ -14,8 +14,8 @@ export default function Summary({data, today})  {
           <h3 className='text-base'>Total this month</h3>
           <p className='text-dark-brown pt-1 text-3xl font-bold'>$478.33</p>
         </div>
-        <div className="summary__footer__last-month self-end">
-          <p className='text-right text-dark-brown font-bold'>+2.4%</p>
+        <div className="summary__footer__last-month self-end text-right">
+          <p className='text-dark-brown font-bold'>+2.4%</p>
           <h3 className='text-sm'>from last month</h3>
         </div>
       </div>
