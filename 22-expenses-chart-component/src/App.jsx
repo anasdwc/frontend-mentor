@@ -1,13 +1,12 @@
-import './App.css';
-import Balance from './components/Balance';
-import Logo from './images/logo.svg'
-import Data from './data/data.json'
-import Summary from './components/Summary';
-import Footer from './components/Footer';
+import "./App.css";
+import Balance from "./components/Balance";
+import Logo from "./images/logo.svg";
+import Data from "./data/data.json";
+import Summary from "./components/Summary";
+import Footer from "./components/Footer";
 
 function App() {
-
-  const today = new Date().toDateString().split(' ')[0].toLowerCase()
+  const today = new Date().toDateString().split(" ")[0].toLowerCase();
 
   return (
     <div className="App max-w-sm">
