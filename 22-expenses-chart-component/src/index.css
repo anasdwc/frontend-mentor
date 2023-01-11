@@ -1,0 +1,7 @@
+/* CSS Reset */
+@import-normalize;
+
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
