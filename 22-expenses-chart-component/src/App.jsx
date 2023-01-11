@@ -5,11 +5,13 @@ import Data from './data/data.json'
 import Summary from './components/Summary';
 
 function App() {
+
+  const today = new Date().toDateString().split(' ')[0].toLowerCase()
+
   return (
-    <div className="App">
-      <h1 className="font-bold text-3xl">Hello World</h1>
+    <div className="App max-w-sm">
       <Balance logo={Logo} />
-      <Summary data={Data} />
+      <Summary data={Data} today={today} />
     </div>
   );
 }
