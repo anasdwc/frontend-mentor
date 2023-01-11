@@ -9,4 +9,19 @@
 .bar {
   border-radius: 0.25rem;
   margin-bottom: 0.25rem;
+  position: relative;
+}
+
+.bar.active::after {
+  content: attr(data-height);
+  font-size: 12px;
+  top: -30px;
+  left: -8px;
+  right: 0;
+  background-color: black;
+  color: white;
+  border-radius: 0.25rem;
+  padding: 0.2rem 0;
+  width: 50px;
+  position: absolute;
 }

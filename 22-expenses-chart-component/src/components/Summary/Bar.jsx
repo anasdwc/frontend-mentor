@@ -1,4 +1,4 @@
-export default function Bar({day, height, today}) {
+export default function Bar({day, height, today, handleBar}) {
   const maxHeight = height * 200 / 70
 
   const style = {
@@ -10,7 +10,7 @@ export default function Bar({day, height, today}) {
   return (
     <div className="bar-stats">
       <div className="bar-stats__header">
-        <div className={`bar ${bgBar}`} data-day={day} style={style}></div>
+        <div className={`bar ${bgBar}`} data-day={day} data-height={`$${height}`} style={style} onClick={handleBar}></div>
         <p>{day}</p>
       </div>
     </div>

@@ -10,5 +10,15 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
 
 body {
+  height: 100vh;
+  overflow: hidden;
   background-color: hsl(27, 66%, 92%);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.attribution a {
+  color: hsl(10, 79%, 65%);
+  font-weight: bold;
 }
