@@ -60,6 +60,11 @@ body {
       padding: 1rem;
       border-radius: 50%;
       cursor: pointer;
+
+      &:hover {
+        // background-color: hsl(150, 100%, 80%);
+        box-shadow: 0 0 25px 5px $neon-green;
+      }
     }
   }
 }
