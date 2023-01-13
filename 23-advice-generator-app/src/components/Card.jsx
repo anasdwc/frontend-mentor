@@ -2,17 +2,15 @@ export default function Card({
   desktopDividerImg,
   mobileDividerImg,
   iconDiceImg,
+  quote,
 }) {
   return (
     <div className="card">
       <div className="card__header">
-        <h1>Advice #117</h1>
+        <h1>Advice #{quote.id}</h1>
       </div>
       <div className="card__quote">
-        <p>
-          "It is easy to sit up and take notice, what's difficult is getting up
-          and taking action."
-        </p>
+        <p>"{quote.advice}"</p>
       </div>
       <div className="card__divider">
         <picture>
