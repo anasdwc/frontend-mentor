@@ -3,6 +3,7 @@ import Card from "./components/Card";
 import mobileDividerImg from "./images/pattern-divider-mobile.svg";
 import desktopDividerImg from "./images/pattern-divider-desktop.svg";
 import iconDiceImg from "./images/icon-dice.svg";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           iconDiceImg={iconDiceImg}
         />
       </main>
+      <Footer />
     </div>
   );
 }

@@ -64,6 +64,15 @@ body {
   }
 }
 
+footer {
+  margin: 4rem 0 0;
+  font-size: 0.8rem;
+  text-align: center;
+  a {
+    color: $neon-green;
+  }
+}
+
 @media screen and (min-width: 1000px) {
   .card {
     padding: 3rem 2rem;
