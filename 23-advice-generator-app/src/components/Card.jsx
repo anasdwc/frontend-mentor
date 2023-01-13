@@ -3,14 +3,15 @@ export default function Card({
   mobileDividerImg,
   iconDiceImg,
   quote,
+  randomButton,
 }) {
   return (
     <div className="card">
       <div className="card__header">
-        <h1>Advice #{quote.id}</h1>
+        <h1>Advice {quote ? `#${quote.id}` : ""}</h1>
       </div>
       <div className="card__quote">
-        <p>"{quote.advice}"</p>
+        {quote ? <p>"{quote.advice}"</p> : <p>Loading...</p>}
       </div>
       <div className="card__divider">
         <picture>
@@ -27,7 +28,7 @@ export default function Card({
         </picture>
       </div>
       <div className="card__dice">
-        <button>
+        <button onClick={randomButton}>
           <img
             src={iconDiceImg}
             alt="click to get random advice"

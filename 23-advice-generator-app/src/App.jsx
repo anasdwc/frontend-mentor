@@ -8,12 +8,19 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [quote, setQuote] = useState("");
+  const urlApi = "https://api.adviceslip.com/advice";
 
   useEffect(() => {
-    fetch("https://api.adviceslip.com/advice/71")
+    fetch(urlApi + "/71")
       .then((res) => res.json())
       .then((data) => setQuote(data.slip));
   }, []);
+
+  const handleRandomButton = () => {
+    fetch(urlApi, { method: "GET", cache: "reload" })
+      .then((res) => res.json())
+      .then((data) => setQuote(data.slip));
+  };
 
   return (
     <div className="App">
@@ -23,6 +30,7 @@ function App() {
           desktopDividerImg={desktopDividerImg}
           iconDiceImg={iconDiceImg}
           quote={quote}
+          randomButton={handleRandomButton}
         />
       </main>
       <Footer />
