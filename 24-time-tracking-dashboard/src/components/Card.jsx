@@ -2,7 +2,7 @@ import buttonImg from "../assets/icon-ellipsis.svg";
 
 function Card({ banner, title, currentTime, prevTime }) {
   return (
-    <div className="card">
+    <div className={`card ${title.split(" ").join("-").toLowerCase()}`}>
       <div className="card__banner">
         <img
           src={banner}
@@ -13,7 +13,7 @@ function Card({ banner, title, currentTime, prevTime }) {
       <div className="card__body">
         <div className="card__body__current-time">
           <h2>{title}</h2>
-          <h3>{currentTime}</h3>
+          <h3>{currentTime}hrs</h3>
         </div>
         <div className="card__body__previous-time">
           <div className="card__body__previous-time__button">

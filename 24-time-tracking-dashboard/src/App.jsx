@@ -16,7 +16,7 @@ import workIcon from "./assets/icon-work.svg";
 import data from "./data/data.json";
 
 function App() {
-  const [timeframes, setTimeframes] = useState("monthly");
+  const [timeframes, setTimeframes] = useState("weekly");
   const banners = [
     workIcon,
     playIcon,

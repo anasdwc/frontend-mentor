@@ -12,6 +12,20 @@ $dark-blue: hsl(235, 46%, 20%);
 $desaturated-blue: hsl(235, 45%, 61%);
 $pale-blue: hsl(236, 100%, 87%);
 
+%card {
+  margin: 2rem;
+  border-radius: 1rem;
+}
+
+$colors: (
+  "work": $light-red-work,
+  "play": $soft-blue-play,
+  "study": $light-red-study,
+  "exercise": $lime-green-exercise,
+  "social": $violet-social,
+  "self-care": $soft-orange-self-care,
+);
+
 body {
   font-family: "Rubik";
   font-size: 18px;
@@ -20,9 +34,8 @@ body {
 }
 
 .author {
-  margin: 2rem;
+  @extend %card;
   background-color: $dark-blue;
-  border-radius: 1rem;
 
   &__header {
     background-color: $blue;
@@ -68,6 +81,92 @@ body {
       &.active {
         color: white;
       }
+    }
+  }
+}
+
+@each $name, $color in $colors {
+  .card.#{$name} {
+    background-color: $color;
+    position: relative;
+    height: 180px;
+  }
+}
+
+.card {
+  @extend %card;
+  overflow-y: hidden;
+  max-width: 350px;
+
+  &__banner {
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+      padding-right: 1rem;
+      position: absolute;
+      top: -5px;
+    }
+  }
+
+  &__body {
+    background-color: $dark-blue;
+    position: absolute;
+    width: 100%;
+    padding: 2rem 0;
+    border-radius: 1rem;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+    }
+
+    &__current-time {
+      h2 {
+        font-size: 1.2rem;
+      }
+      h3 {
+        font-size: 2rem;
+        margin-top: 0.5rem;
+        font-weight: 300;
+      }
+    }
+
+    &__previous-time {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      button {
+        background-color: transparent;
+        border: none;
+        padding-bottom: 1rem;
+        cursor: pointer;
+      }
+      h3 {
+        font-size: 1rem;
+        font-weight: 500;
+        color: $pale-blue;
+      }
+    }
+  }
+}
+
+footer {
+  @extend %card;
+  font-size: 0.8rem;
+  font-weight: 300;
+  text-align: center;
+  a {
+    color: $soft-blue-play;
+    font-weight: 400;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
     }
   }
 }
