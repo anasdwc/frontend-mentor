@@ -2,7 +2,7 @@ import Card from "./Card";
 
 function CardsList({ data, time, banners }) {
   return (
-    <div className="card-list">
+    <>
       {data.map((item, idx) => (
         <Card
           key={idx}
@@ -12,7 +12,7 @@ function CardsList({ data, time, banners }) {
           banner={banners[idx]}
         />
       ))}
-    </div>
+    </>
   );
 }
 

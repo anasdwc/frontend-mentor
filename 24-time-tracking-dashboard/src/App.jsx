@@ -28,12 +28,15 @@ function App() {
 
   return (
     <div className="App">
-      <Author avatar={avatarImg} />
-      <CardsList
-        data={data}
-        time={timeframes}
-        banners={banners}
-      />
+      <main>
+        <Author avatar={avatarImg} />
+
+        <CardsList
+          data={data}
+          time={timeframes}
+          banners={banners}
+        />
+      </main>
       <Footer />
     </div>
   );

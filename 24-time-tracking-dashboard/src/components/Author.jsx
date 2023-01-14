@@ -1,6 +1,6 @@
 function Author({ avatar }) {
   return (
-    <div className="card author">
+    <div className="author">
       <div className="author__header">
         <div className="author__header__avatar">
           <img
