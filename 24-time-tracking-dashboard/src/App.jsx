@@ -26,10 +26,19 @@ function App() {
     selfCareIcon,
   ];
 
+  const hanleButton = ({ target }) => {
+    const time = target.innerText.toLowerCase();
+    setTimeframes(time);
+  };
+
   return (
     <div className="App">
       <main>
-        <Author avatar={avatarImg} />
+        <Author
+          avatar={avatarImg}
+          onClick={hanleButton}
+          time={timeframes}
+        />
 
         <CardsList
           data={data}

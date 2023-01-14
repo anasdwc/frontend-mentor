@@ -3,13 +3,7 @@ import buttonImg from "../assets/icon-ellipsis.svg";
 function Card({ banner, title, currentTime, prevTime }) {
   return (
     <div className={`card ${title.split(" ").join("-").toLowerCase()}`}>
-      <div className="card__banner">
-        {/* <img
-          src={banner}
-          alt=""
-          aria-hidden={true}
-        /> */}
-      </div>
+      <div className="card__banner"></div>
       <div className="card__body">
         <h2 className="title">{title}</h2>
         <button className="button-setting">

@@ -1,4 +1,4 @@
-function Author({ avatar }) {
+function Author({ avatar, onClick, time }) {
   return (
     <div className="author">
       <div className="author__header">
@@ -16,9 +16,30 @@ function Author({ avatar }) {
       </div>
       <div className="author__body">
         <ul>
-          <li className="daily ">Daily</li>
-          <li className="weekly active">Weekly</li>
-          <li className="monthly">Monthly</li>
+          <li className="daily">
+            <button
+              className={time === "daily" ? "active" : ""}
+              onClick={onClick}
+            >
+              Daily
+            </button>
+          </li>
+          <li className="weekly">
+            <button
+              className={time === "weekly" ? "active" : ""}
+              onClick={onClick}
+            >
+              Weekly
+            </button>
+          </li>
+          <li className="monthly">
+            <button
+              className={time === "monthly" ? "active" : ""}
+              onClick={onClick}
+            >
+              Monthly
+            </button>
+          </li>
         </ul>
       </div>
     </div>
