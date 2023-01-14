@@ -16,9 +16,9 @@ function Author({ avatar }) {
       </div>
       <div className="author__body">
         <ul>
-          <li>Daily</li>
-          <li>Weekly</li>
-          <li>Monthly</li>
+          <li className="daily ">Daily</li>
+          <li className="weekly active">Weekly</li>
+          <li className="monthly">Monthly</li>
         </ul>
       </div>
     </div>
