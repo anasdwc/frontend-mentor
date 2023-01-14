@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor | Time Tracking Dashboard | React coding challenge solution](https://www.frontendmentor.io/solutions/time-tracking-dashboard-xxD9MzD7QO)
+- Live Site URL: [Frontend Mentor | Time tracking dashboard](https://fm-junior-time-tracking.netlify.app/)
 
 ## My process
 
