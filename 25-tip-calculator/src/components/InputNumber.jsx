@@ -1,6 +1,6 @@
 function InputNumber({ id, label, labelIcon }) {
   return (
-    <div className="input-group mb-8">
+    <div className="input-group">
       <label
         htmlFor={id}
         className="mb-2 block text-lg font-bold text-dark-grayish-cyan"
@@ -20,7 +20,7 @@ function InputNumber({ id, label, labelIcon }) {
           type="number"
           id={id}
           placeholder="0"
-          className=" w-full rounded-lg bg-very-light-grayish-cyan py-4 px-6 text-right text-2xl font-bold text-very-dark-cyan"
+          className=" w-full rounded-lg bg-very-light-grayish-cyan py-2 px-6 text-right text-2xl font-bold text-very-dark-cyan"
         />
       </div>
     </div>

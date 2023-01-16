@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import logoBrand from "./assets/logo.svg";
 import Body from "./components/Body";
 import { useState } from "react";
+import Footer from "./components/Footer";
 
 function App() {
   const [tip, setTip] = useState();
@@ -18,9 +19,10 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App flex w-screen flex-col items-center justify-center bg-light-grayish-cyan">
       <Header logoBrand={logoBrand} />
       <Body onClick={handleSelectTip} percentValue={tip} />
+      <Footer />
     </div>
   );
 }

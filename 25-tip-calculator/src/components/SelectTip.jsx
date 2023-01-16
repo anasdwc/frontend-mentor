@@ -4,7 +4,7 @@ function SelectTip({ onClick, percentValue }) {
   const tips = ["5", "10", "15", "25", "50"];
 
   return (
-    <div className="input-group mb-8 grid grid-cols-2 gap-4">
+    <div className="input-group my-8 grid grid-cols-2 gap-4 lg:grid-cols-3">
       <label
         htmlFor="tip"
         className="col-span-full mb-2 block text-lg font-bold text-dark-grayish-cyan"
