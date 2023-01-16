@@ -32,7 +32,7 @@ function Body({
         />
       </section>
       <section className="result">
-        <Result />
+        <Result bill={billValue} people={peopleValue} tip={percentValue} />
       </section>
     </main>
   );

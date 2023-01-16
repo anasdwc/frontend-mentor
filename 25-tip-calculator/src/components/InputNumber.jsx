@@ -30,7 +30,7 @@ function InputNumber({ id, label, labelIcon, onInput, inputValue }) {
         <input
           type="number"
           id={id}
-          onInput={onInput}
+          onChange={onInput}
           value={inputValue}
           placeholder="0"
           className={`w-full rounded-lg  bg-very-light-grayish-cyan py-2 px-6 text-right text-2xl font-bold text-very-dark-cyan focus-within:outline-strong-cyan ${errorBorder}`}

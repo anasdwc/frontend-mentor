@@ -12,18 +12,29 @@ function BoxTotal({ title, total }) {
   );
 }
 
-function Result() {
+function Result({ bill, people, tip }) {
+  const disableButton = bill === 0 && people === 0 ? true : false;
+
+  const tipTotal = ((Number(bill) * Number(tip)) / 100).toFixed(2);
+  const tipPerson = (tipTotal / Number(people)).toFixed(2);
+
+  const total = Number(tipTotal) + Number(bill);
+  const totalPerson = (total / Number(people)).toFixed(2);
+
   return (
     <div className="result flex h-full flex-col justify-between rounded-xl bg-very-dark-cyan px-6 pt-8 pb-6 text-very-light-grayish-cyan lg:px-8 lg:pt-10">
       <div className="result-body">
-        <BoxTotal title={"Tip Amount"} total={0.0} />
-        <BoxTotal title={"Total"} total={0.0} />
+        <BoxTotal
+          title={"Tip Amount"}
+          total={tipPerson === "NaN" ? 0 : tipPerson}
+        />
+        <BoxTotal
+          title={"Total"}
+          total={totalPerson === "NaN" ? 0 : totalPerson}
+        />
       </div>
       <div className="reset-button">
-        <button
-          type="reset"
-          className="w-full rounded-md bg-strong-cyan py-2 text-lg font-bold uppercase text-very-dark-cyan hover:bg-light-grayish-cyan lg:py-4"
-        >
+        <button className="w-full rounded-md bg-strong-cyan py-2 text-lg font-bold uppercase text-very-dark-cyan hover:bg-light-grayish-cyan lg:py-4">
           Reset
         </button>
       </div>
