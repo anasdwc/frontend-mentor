@@ -23,7 +23,6 @@ function SelectTip({ onClick, percentValue }) {
         <input
           type="number"
           id="customTip"
-          value={percentValue}
           placeholder="Custom"
           className="w-full rounded-md bg-very-light-grayish-cyan py-2 px-4 text-right text-2xl font-bold text-very-dark-cyan placeholder-dark-grayish-cyan focus-within:outline-strong-cyan"
           onInput={onClick}
