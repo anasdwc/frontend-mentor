@@ -7,7 +7,7 @@ function InputRadio({ text, onClick, percentValue }) {
 
   return (
     <div
-      className={`radio  ${active} flex w-full cursor-pointer items-center justify-center rounded-md py-2 px-4 text-center text-2xl font-bold `}
+      className={`radio  ${active} flex w-full cursor-pointer items-center justify-center rounded-md py-2 px-4 text-center text-2xl font-bold hover:bg-light-grayish-cyan hover:text-very-dark-cyan`}
       onClick={onClick}
     >
       <p>{text}%</p>

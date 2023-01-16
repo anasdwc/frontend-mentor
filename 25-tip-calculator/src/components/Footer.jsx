@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer>
-      <div className="attribution py-8">
+      <div className="attribution py-8 text-center text-xs">
         Challenge by{" "}
         <a
           href="https://www.frontendmentor.io?ref=challenge"

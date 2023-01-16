@@ -24,7 +24,7 @@ function SelectTip({ onClick, percentValue }) {
           type="number"
           id="customTip"
           placeholder="Custom"
-          className="w-full rounded-md bg-very-light-grayish-cyan py-2 px-4 text-right text-2xl font-bold text-very-dark-cyan placeholder-dark-grayish-cyan"
+          className="w-full rounded-md bg-very-light-grayish-cyan py-2 px-4 text-right text-2xl font-bold text-very-dark-cyan placeholder-dark-grayish-cyan focus-within:outline-strong-cyan"
           onInput={onClick}
         />
       </div>

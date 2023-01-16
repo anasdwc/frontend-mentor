@@ -14,15 +14,15 @@ function BoxTotal({ title, total }) {
 
 function Result() {
   return (
-    <div className="result flex h-full flex-col justify-between rounded-xl bg-very-dark-cyan px-6 pt-8 pb-6 text-white lg:px-8 lg:pt-10">
+    <div className="result flex h-full flex-col justify-between rounded-xl bg-very-dark-cyan px-6 pt-8 pb-6 text-very-light-grayish-cyan lg:px-8 lg:pt-10">
       <div className="result-body">
-        <BoxTotal title={"Tip Amount"} total={4.27} />
-        <BoxTotal title={"Total"} total={32.79} />
+        <BoxTotal title={"Tip Amount"} total={0.0} />
+        <BoxTotal title={"Total"} total={0.0} />
       </div>
       <div className="reset-button">
         <button
           type="reset"
-          className="w-full rounded-md bg-strong-cyan py-2 text-lg font-bold uppercase text-very-dark-cyan lg:py-4"
+          className="w-full rounded-md bg-strong-cyan py-2 text-lg font-bold uppercase text-very-dark-cyan hover:bg-light-grayish-cyan lg:py-4"
         >
           Reset
         </button>

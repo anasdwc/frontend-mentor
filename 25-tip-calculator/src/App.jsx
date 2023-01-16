@@ -8,6 +8,8 @@ import Footer from "./components/Footer";
 
 function App() {
   const [tip, setTip] = useState();
+  const [bill, setBill] = useState();
+  const [people, setPeople] = useState();
 
   const handleSelectTip = ({ target }) => {
     if (target.id === "customTip") {
@@ -19,9 +21,16 @@ function App() {
   };
 
   return (
-    <div className="App flex w-screen flex-col items-center justify-center bg-light-grayish-cyan">
+    <div className="App flex flex-col items-center justify-center bg-light-grayish-cyan lg:h-screen">
       <Header logoBrand={logoBrand} />
-      <Body onClick={handleSelectTip} percentValue={tip} />
+      <Body
+        onClick={handleSelectTip}
+        percentValue={tip}
+        handleBill={({ target }) => setBill(target.value)}
+        handlePeople={({ target }) => setPeople(target.value)}
+        billValue={bill}
+        peopleValue={people}
+      />
       <Footer />
     </div>
   );
