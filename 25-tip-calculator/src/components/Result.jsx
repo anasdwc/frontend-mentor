@@ -13,7 +13,9 @@ function BoxTotal({ title, total }) {
 }
 
 function Result({ bill, people, tip, handleReset }) {
-  const disableButton = bill === 0 && people === 0 ? true : false;
+  const disableButton = bill || people || tip ? false : true;
+
+  console.log(disableButton);
 
   const tipTotal = ((Number(bill) * Number(tip)) / 100).toFixed(2);
   const tipPerson = (tipTotal / Number(people)).toFixed(2);
@@ -35,7 +37,8 @@ function Result({ bill, people, tip, handleReset }) {
       </div>
       <div className="reset-button">
         <button
-          className="w-full rounded-md bg-strong-cyan py-2 text-lg font-bold uppercase text-very-dark-cyan hover:bg-light-grayish-cyan lg:py-4"
+          disabled={disableButton}
+          className="w-full rounded-md bg-strong-cyan py-2 text-lg font-bold uppercase text-very-dark-cyan hover:bg-light-grayish-cyan disabled:bg-grayish-cyan lg:py-4"
           onClick={handleReset}
         >
           Reset
