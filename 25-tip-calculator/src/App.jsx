@@ -20,6 +20,12 @@ function App() {
     }
   };
 
+  const handleReset = () => {
+    setTip("");
+    setPeople("");
+    setBill("");
+  };
+
   return (
     <div className="App flex flex-col items-center justify-center bg-light-grayish-cyan lg:h-screen">
       <Header logoBrand={logoBrand} />
@@ -30,6 +36,7 @@ function App() {
         handlePeople={({ target }) => setPeople(target.value)}
         billValue={bill}
         peopleValue={people}
+        handleReset={handleReset}
       />
       <Footer />
     </div>

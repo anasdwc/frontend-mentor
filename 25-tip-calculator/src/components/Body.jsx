@@ -11,6 +11,7 @@ function Body({
   handleBill,
   peopleValue,
   handlePeople,
+  handleReset,
 }) {
   return (
     <main className="-mt-4 max-w-5xl rounded-3xl bg-white px-8 py-16 lg:grid lg:grid-cols-2 lg:gap-12 lg:p-12">
@@ -32,7 +33,12 @@ function Body({
         />
       </section>
       <section className="result">
-        <Result bill={billValue} people={peopleValue} tip={percentValue} />
+        <Result
+          bill={billValue}
+          people={peopleValue}
+          tip={percentValue}
+          handleReset={handleReset}
+        />
       </section>
     </main>
   );
