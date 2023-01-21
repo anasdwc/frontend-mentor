@@ -9,16 +9,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/barlow": "^4.5.9",
+    "@fontsource/fraunces": "^4.5.10",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "styled-components": "^5.3.6",
-    "styled-normalize": "^8.0.7"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
     "@vitejs/plugin-react": "^3.0.0",
-    "babel-plugin-styled-components": "^2.0.7",
     "vite": "^4.0.0"
   }
 }
