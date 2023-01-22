@@ -7,8 +7,14 @@ export default function Header() {
         <div className="brand">
           <img className="w-28" src="./images/logo.svg" alt="Sunnyside Logo" />
         </div>
-        <div>
-          <ul className="flex items-center gap-8 text-sm text-white opacity-90">
+        <div
+          className="before:content-[' '] absolute inset-x-4 top-[4.5rem] w-auto bg-white before:absolute before:-top-4 before:right-0 before:h-10 before:w-10 
+          before:border-[1rem] before:border-white
+          before:border-t-transparent
+        before:border-l-transparent
+          md:relative"
+        >
+          <ul className="flex flex-col items-center gap-6  py-8 text-base text-grayish-blue  opacity-90">
             <li>
               <a href="#">About</a>
             </li>
@@ -18,7 +24,7 @@ export default function Header() {
             <li>
               <a href="#">Projects</a>
             </li>
-            <li className="rounded-full bg-white py-3 px-5 font-['Fraunces'] uppercase text-very-dark-desaturated-blue">
+            <li className="rounded-full bg-yellow-accent py-3 px-5 font-['Fraunces'] text-sm uppercase text-very-dark-desaturated-blue md:bg-white">
               <a href="#">Contact</a>
             </li>
           </ul>
