@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="brand flex justify-center">
         <img src="./images/logo.svg" alt="" />
       </div>
-      <div className="nav">
+      <div className="nav mx-auto max-w-sm">
         <ul className="my-8 flex justify-between text-base text-dark-desaturated-cyan">
           <li>
             <a href="#">About</a>

@@ -23,11 +23,11 @@ function TestimonialItem({ image, username, message, job }) {
 
 export default function Testimonial() {
   return (
-    <section className="px-4 py-6">
+    <section className="px-4 py-6 md:mx-auto md:max-w-7xl md:py-20">
       <h3 className="text-center font-['Fraunces'] text-base uppercase tracking-[.3rem] text-dark-grayish-blue">
         Client Testimonials
       </h3>
-      <div className="testimonial-list">
+      <div className="testimonial-list md:grid md:grid-cols-3">
         <TestimonialItem
           message="We put our trust in Sunnyside and they delivered, making sure our
           needs were met and deadlines were always hit."

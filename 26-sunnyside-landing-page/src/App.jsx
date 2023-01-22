@@ -15,6 +15,7 @@ function App() {
       <Header />
       <main>
         <Card
+          reverse
           title="Transform your brand"
           color={"bg-yellow-accent"}
           description="We are a full-service creative agency speacializing in helping brands
@@ -28,17 +29,19 @@ function App() {
           description="Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we'll build and extend your brand in digital places"
           image="image-stand-out.jpg"
         />
-        <CardImage
-          title="Graphic Design"
-          description="Great design makes you memorable. We deliver artwork that underscores
+        <section className="md:grid md:grid-cols-2">
+          <CardImage
+            title="Graphic Design"
+            description="Great design makes you memorable. We deliver artwork that underscores
           your brand message and captured potential clients' attention."
-          image="image-graphic-design.jpg"
-        />
-        <CardImage
-          title="Photography"
-          description="Increase your credibility by getting the most stunning, high-quality photos that improve your business image"
-          image="image-photography.jpg"
-        />
+            image="image-graphic-design.jpg"
+          />
+          <CardImage
+            title="Photography"
+            description="Increase your credibility by getting the most stunning, high-quality photos that improve your business image"
+            image="image-photography.jpg"
+          />
+        </section>
         <Testimonial />
         <Gallery />
       </main>
