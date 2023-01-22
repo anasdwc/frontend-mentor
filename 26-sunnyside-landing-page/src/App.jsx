@@ -7,6 +7,7 @@ import "@fontsource/fraunces/900.css";
 import { Card, CardImage } from "./components/Card";
 import Testimonial from "./components/Testimonial";
 import Gallery from "./components/Gallery";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
         <Testimonial />
         <Gallery />
       </main>
+      <Footer />
     </>
   );
 }
