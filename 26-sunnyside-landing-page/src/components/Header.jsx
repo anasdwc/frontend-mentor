@@ -31,7 +31,7 @@ export default function Header() {
       </nav>
       <div className="hero">
         <div className="absolute inset-0 top-32 m-auto text-center font-['Fraunces'] text-4xl uppercase leading-tight tracking-widest text-white">
-          <h2 className="text-6xl">We Are Creatives</h2>
+          <h2 className="md:text-6xl">We Are Creatives</h2>
           <img
             className="inset-0 m-auto mt-8 inline md:absolute md:top-56"
             src="./images/icon-arrow-down.svg"
@@ -41,9 +41,9 @@ export default function Header() {
         <picture>
           <source
             media="(min-width: 768px)"
-            srcset={`./images/desktop/image-header.jpg`}
+            srcSet={`./images/desktop/image-header.jpg`}
           />
-          <source srcset={`./images/mobile/image-header.jpg`} />
+          <source srcSet={`./images/mobile/image-header.jpg`} />
           <img
             className="-mt-24 object-center md:-mt-28"
             src={`./images/mobile/image-header.jpg`}

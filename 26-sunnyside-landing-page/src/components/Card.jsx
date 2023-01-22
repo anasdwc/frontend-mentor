@@ -8,9 +8,9 @@ function Card({ title, description, color, image, reverse }) {
         <picture>
           <source
             media="(min-width: 768px)"
-            srcset={`./images/desktop/${image}`}
+            srcSet={`./images/desktop/${image}`}
           />
-          <source srcset={`./images/mobile/${image}`} />
+          <source srcSet={`./images/mobile/${image}`} />
           <img className="w-full" src={`./images/mobile/${image}`} alt="" />
         </picture>
       </div>
@@ -44,9 +44,9 @@ function CardImage({ title, description, image }) {
       <picture>
         <source
           media="(min-width: 768px)"
-          srcset={`./images/desktop/${image}`}
+          srcSet={`./images/desktop/${image}`}
         />
-        <source srcset={`./images/mobile/${image}`} />
+        <source srcSet={`./images/mobile/${image}`} />
         <img className="w-full" src={`./images/mobile/${image}`} alt="" />
       </picture>
       <div
