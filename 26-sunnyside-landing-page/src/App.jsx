@@ -6,6 +6,7 @@ import "@fontsource/fraunces/700.css";
 import "@fontsource/fraunces/900.css";
 import { Card, CardImage } from "./components/Card";
 import Testimonial from "./components/Testimonial";
+import Gallery from "./components/Gallery";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           image="image-photography.jpg"
         />
         <Testimonial />
+        <Gallery />
       </main>
     </>
   );
