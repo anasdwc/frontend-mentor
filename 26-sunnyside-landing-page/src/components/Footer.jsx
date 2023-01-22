@@ -36,7 +36,7 @@ export default function Footer() {
         </ul>
       </div>
       <div>
-        <div class="attribution mt-10 text-xs text-dark-desaturated-cyan">
+        <div class="attribution mt-10 text-center text-xs text-dark-desaturated-cyan">
           Challenge by{" "}
           <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
             Frontend Mentor
