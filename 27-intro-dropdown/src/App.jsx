@@ -1,10 +1,16 @@
 import Footer from "./components/Footer";
+import Header from "./components/Header";
+
+import "@fontsource/epilogue/500.css";
+import "@fontsource/epilogue/700.css";
+import Body from "./components/Body";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello</h1>
-      {/* <Footer /> */}
+      <Header />
+      <Body />
+      <Footer />
     </div>
   );
 }
