@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor | Sunnyside Landing Page | ReactJS & TailwindCSS coding challenge solution](https://www.frontendmentor.io/solutions/sunnyside-agency-landing-page-s7yOsMX8Pm)
+- Live Site URL: [Frontend Mentor | Sunnyside agency landing page](https://fm-junior-sunnyside.netlify.app/)
 
 ## My process
 
