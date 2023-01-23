@@ -1,6 +1,7 @@
+import clsx from "clsx";
 import React from "react";
 
-export default function Header() {
+export default function Header({ handleBurger, isCollapsed }) {
   return (
     <header className="relative">
       <nav className="relative z-10 flex justify-between p-4 md:p-8">
@@ -8,13 +9,12 @@ export default function Header() {
           <img className="w-28" src="./images/logo.svg" alt="Sunnyside Logo" />
         </div>
         <div
-          className="before:content-[' '] absolute inset-x-4 top-[4.5rem] w-auto bg-white before:absolute before:-top-4 before:right-0 before:h-10 before:w-10 
-          before:border-[1rem] before:border-white
-          before:border-t-transparent
-        before:border-l-transparent
-          md:relative"
+          className={clsx(
+            "before:content-[' '] absolute inset-x-4 top-[4.5rem] w-auto -translate-y-96 bg-white before:absolute before:-top-4 before:right-0 before:h-10 before:w-10  before:border-[1rem] before:border-white before:border-t-transparent before:border-l-transparent md:static md:block md:translate-y-0 md:bg-transparent md:before:hidden",
+            isCollapsed && "translate-y-0 "
+          )}
         >
-          <ul className="flex flex-col items-center gap-6  py-8 text-base text-grayish-blue  opacity-90">
+          <ul className="flex flex-col items-center gap-6 py-8 text-base text-grayish-blue  opacity-90 md:flex-row md:py-0 md:text-white">
             <li>
               <a href="#">About</a>
             </li>
@@ -30,7 +30,7 @@ export default function Header() {
           </ul>
         </div>
         <div className="burger md:hidden">
-          <button>
+          <button onClick={handleBurger}>
             <img src="./images/icon-hamburger.svg" alt="" />
           </button>
         </div>

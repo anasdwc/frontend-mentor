@@ -8,11 +8,19 @@ import { Card, CardImage } from "./components/Card";
 import Testimonial from "./components/Testimonial";
 import Gallery from "./components/Gallery";
 import Footer from "./components/Footer";
+import { useState } from "react";
 
 function App() {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
+  const handleBurger = () => {
+    console.log("halo");
+    setIsCollapsed(!isCollapsed);
+  };
+
   return (
     <>
-      <Header />
+      <Header handleBurger={handleBurger} isCollapsed={isCollapsed} />
       <main>
         <Card
           reverse
