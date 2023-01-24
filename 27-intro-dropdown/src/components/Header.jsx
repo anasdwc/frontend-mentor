@@ -10,13 +10,13 @@ export default function Header({ isCollapsed, onClick }) {
         <div id="nav-list">
           <div
             className={clsx(
-              "absolute inset-0 h-screen w-screen bg-almost-black opacity-60 transition-opacity duration-500",
-              isCollapsed && "opacity-0"
+              "fixed inset-0 h-screen w-screen bg-almost-black opacity-60 transition-all duration-500",
+              isCollapsed && "-z-10 opacity-0"
             )}
           ></div>
           <ul
             className={clsx(
-              "absolute  right-0 top-0 flex h-screen w-[60vw]  flex-col gap-4 bg-almost-white  pl-6 pt-20 pr-4 text-sm text-medium-gray transition-transform duration-500",
+              "fixed right-0 top-0 flex h-screen w-[60vw]  flex-col gap-4 bg-almost-white  pl-6 pt-20 pr-4 text-sm text-medium-gray transition-transform duration-500",
               isCollapsed && "translate-x-64 ",
               "[&>li]:cursor-pointer"
             )}
@@ -88,7 +88,10 @@ export default function Header({ isCollapsed, onClick }) {
           </ul>
         </div>
         <div id="burger" className="relative z-10">
-          <button onClick={onClick} className="h-10">
+          <button
+            onClick={onClick}
+            className={clsx("h-10", !isCollapsed && "fixed right-4 top-3")}
+          >
             {isCollapsed ? (
               <img src="./images/icon-menu.svg" alt="" />
             ) : (
