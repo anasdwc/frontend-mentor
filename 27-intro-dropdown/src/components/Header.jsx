@@ -34,9 +34,10 @@ function NavItems({ isCollapsed }) {
   return (
     <ul
       className={clsx(
-        "fixed right-0 top-0 flex h-screen w-[60vw]  flex-col gap-4 bg-almost-white  pl-6 pt-20 pr-4 text-sm text-medium-gray transition-transform duration-500",
+        "fixed right-0 top-0 flex h-screen w-[60vw] flex-col gap-4 bg-almost-white  pl-6 pt-20 pr-4 text-sm text-medium-gray transition-transform duration-500",
         isCollapsed && "translate-x-64 ",
-        "[&>li]:cursor-pointer"
+        "[&>li]:cursor-pointer",
+        "md:relative md:flex md:h-auto md:translate-x-0 md:flex-row md:place-items-center md:bg-transparent md:py-4"
       )}
     >
       <ListExpanded title="Features">
@@ -81,7 +82,7 @@ function Background({ isCollapsed }) {
 
 function BurgerButton({ isCollapsed, onClick }) {
   return (
-    <div id="burger" className="relative z-10">
+    <div id="burger" className="relative z-10 md:hidden">
       <button
         onClick={onClick}
         className={clsx("h-10", !isCollapsed && "fixed right-4 top-3")}
@@ -103,12 +104,10 @@ export default function Header({ isCollapsed, onClick }) {
         <div id="brand">
           <img src="./images/logo.svg" alt="" />
         </div>
-        <div id="nav-list">
-          <Background isCollapsed={isCollapsed} />
-          <NavItems isCollapsed={isCollapsed} />
-          <BurgerButton isCollapsed={isCollapsed} onClick={onClick} />
-        </div>
+        <NavItems isCollapsed={isCollapsed} />
+        <BurgerButton isCollapsed={isCollapsed} onClick={onClick} />
       </nav>
+      <Background isCollapsed={isCollapsed} />
       <div id="banner">
         <picture>
           <source
