@@ -9,7 +9,7 @@ import { useState } from "react";
 function App() {
   const [isCollapsed, setIsCollapsed] = useState(true);
   return (
-    <div className="App overflow-hidden">
+    <div className="App overflow-hidden bg-almost-white">
       <Header
         isCollapsed={isCollapsed}
         onClick={() => setIsCollapsed(!isCollapsed)}
