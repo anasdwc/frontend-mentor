@@ -13,6 +13,7 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: 'Epilogue';
+    background-color: ${({ theme }) => theme.colors.white};
     font-size: 16px;
     font-weight: 500;
     margin: 0;
