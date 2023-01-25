@@ -1,4 +1,6 @@
 import { ThemeProvider } from "styled-components";
+import Body from "./components/Body";
+import Client from "./components/Cllient";
 import Header from "./components/Header";
 import { Container } from "./components/styles/Container.styled";
 import GlobalStyles from "./components/styles/Global";
@@ -18,6 +20,8 @@ function App() {
         <GlobalStyles />
         <Container>
           <Header />
+          <Body />
+          <Client />
         </Container>
       </>
     </ThemeProvider>
