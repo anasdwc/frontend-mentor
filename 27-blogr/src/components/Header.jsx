@@ -5,7 +5,7 @@ function Header() {
         <img
           src="./images/bg-pattern-intro-mobile.svg"
           alt=""
-          className="w-[70rem]"
+          className="max-w-[70rem]"
         />
       </div>
       <div id="navbar" className="flex items-center justify-between">
