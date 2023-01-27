@@ -16,6 +16,8 @@ module.exports = {
         "very-dark-black-blue": "hsl(240, 10%, 16%)",
         "gradient-very-light-red": "hsl(13, 100%, 72%)",
         "gradient-light-red": "hsl(353, 100%, 62%)",
+        "very-dark-gray-blue": "hsl(237, 17%, 21%)",
+        "very-dark-desaturated-blue": "hsl(237, 23%, 32%)",
       },
       backgroundImage: {
         "hero-pattern-mobile": "url('./images/bg-pattern-intro-mobile.svg')",
