@@ -1,11 +1,11 @@
 function Header() {
   return (
     <header className="relative overflow-hidden rounded-bl-[5rem] bg-gradient-to-br from-gradient-very-light-red  to-gradient-light-red py-8 px-4">
-      <div className="absolute -top-[100px] -left-[200px] m-auto">
+      <div className="absolute -top-[200px] -left-[250px] m-auto">
         <img
           src="./images/bg-pattern-intro-mobile.svg"
           alt=""
-          className="w-[60rem]"
+          className="w-[70rem]"
         />
       </div>
       <div id="navbar" className="flex items-center justify-between">
