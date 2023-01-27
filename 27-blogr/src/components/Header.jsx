@@ -8,7 +8,10 @@ function Header() {
           className="max-w-[70rem]"
         />
       </div>
-      <div id="navbar" className="flex items-center justify-between">
+      <div
+        id="navbar"
+        className="relative z-10 flex items-center justify-between"
+      >
         <div id="brand">
           <img src="./images/logo.svg" alt="" className="w-20" />
         </div>
