@@ -7,6 +7,7 @@ import "@fontsource/ubuntu/500.css";
 import "@fontsource/ubuntu/700.css";
 import { ArticleOne, ArticleTwo } from "./components/Article";
 import Phone from "./components/Phone";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Phone />
         <ArticleTwo />
       </main>
+      <Footer />
     </div>
   );
 }
