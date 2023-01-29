@@ -2,7 +2,7 @@ function Hero() {
   return (
     <div
       id="hero"
-      className="relative z-10 py-24 px-8 text-center text-white md:py-32"
+      className="relative py-24 px-8 text-center text-white md:py-32"
     >
       <div>
         <h1 className="font text-3xl md:text-5xl">

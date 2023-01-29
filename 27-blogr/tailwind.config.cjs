@@ -3,6 +3,15 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      keyframes: {
+        dropdown: {
+          "0%": { transform: "translateY(0px)" },
+          "100%": { transform: "translateY(15px)" },
+        },
+      },
+      animation: {
+        dropdown: "dropdown ease-in-out .5s both",
+      },
       fontFamily: {
         sans: "Ubuntu",
         overpass: "Overpass",
