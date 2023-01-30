@@ -3,8 +3,15 @@ import Hero from "./Hero";
 import BackgroundPattern from "./BackgroundPattern";
 import HamburgerButton from "./HamburgerButton";
 import Navbar from "./Navbar";
+import { useState } from "react";
 
 function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleHumberger = (e) => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <header
       className={clsx(
@@ -17,8 +24,8 @@ function Header() {
         <div id="brand">
           <img src="./images/logo.svg" alt="" className="w-20 md:w-28" />
         </div>
-        <Navbar />
-        <HamburgerButton />
+        <Navbar hamburgerIsOpen={isOpen} />
+        <HamburgerButton handleHamburger={handleHumberger} isOpen={isOpen} />
       </div>
       <Hero />
     </header>

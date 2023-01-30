@@ -6,7 +6,7 @@ module.exports = {
       keyframes: {
         dropdown: {
           "0%": { transform: "translateY(0px)" },
-          "100%": { transform: "translateY(15px)" },
+          "100%": { transform: "translateY(10px)" },
         },
       },
       animation: {
