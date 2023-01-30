@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor | Blogr Landing Page | React & TailwindCSS coding challenge solution](https://www.frontendmentor.io/solutions/blogr-landing-page-react-and-tailwindcss-wVMYGvdjb_)
+- Live Site URL: [Frontend Mentor | [Blogr]](https://fm-junior-blogr.netlify.app/)
 
 ## My process
 
