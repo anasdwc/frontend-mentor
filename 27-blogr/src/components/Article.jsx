@@ -8,7 +8,7 @@ function Post({ title, paragraph, extendedClass }) {
         extendedClass && extendedClass
       )}
     >
-      <h3 className="font-overpass text-2xl font-[600] text-very-dark-blue">
+      <h3 className="font-overpass text-2xl font-[600] text-very-dark-blue md:text-3xl">
         {title}
       </h3>
       <p className="mt-4 mb-8 font-[300] leading-relaxed text-very-dark-grayish-blue opacity-80">
@@ -50,13 +50,19 @@ function ArticleOne() {
 
 function ArticleTwo() {
   return (
-    <section className="my-12 flex flex-col items-center">
-      <div>
-        <img
-          src="./images/illustration-laptop-mobile.svg"
-          alt=""
-          className="my-12 w-full"
-        />
+    <section className="my-12 flex flex-col items-center md:my-96 md:grid md:grid-cols-2 md:gap-y-8 md:px-44">
+      <div className="md:relative md:row-start-1 md:row-end-3">
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="./images/illustration-laptop-desktop.svg"
+          />
+          <img
+            src="./images/illustration-laptop-mobile.svg"
+            alt=""
+            className="my-12 w-full md:absolute md:inset-0 md:-left-[550px] md:m-auto md:min-w-[60rem]"
+          />
+        </picture>
       </div>
       <Post
         title="Free, open, simple"
