@@ -5,6 +5,7 @@ import "@fontsource/commissioner/400.css";
 import "@fontsource/commissioner/500.css";
 import "@fontsource/commissioner/700.css";
 import BambooMonitor from "./components/BambooMonitor";
+import Stats from "./components/Stats";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <main>
         <BambooMonitor />
+        <Stats />
       </main>
     </div>
   );
