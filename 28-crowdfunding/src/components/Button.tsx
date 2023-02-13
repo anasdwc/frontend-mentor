@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { MouseEventHandler } from "react";
 
 const Button: React.FC<{ text: string; isDisabled?: boolean }> = ({
   text,
@@ -30,4 +31,24 @@ const BookmarkButton = () => {
   );
 };
 
-export { Button, BookmarkButton };
+const HamburgerButton: React.FC<{
+  onClick: MouseEventHandler;
+  isExpanded: boolean;
+}> = ({ onClick, isExpanded }) => {
+  return (
+    <div className={clsx("z-10", "md:hidden")}>
+      <button onClick={onClick}>
+        <img
+          src={
+            isExpanded
+              ? "./assets/icon-close-menu.svg"
+              : "./assets/icon-hamburger.svg"
+          }
+          alt=""
+        />
+      </button>
+    </div>
+  );
+};
+
+export { Button, BookmarkButton, HamburgerButton };

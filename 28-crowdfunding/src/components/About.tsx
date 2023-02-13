@@ -47,7 +47,7 @@ function About() {
       </div>
       <div>
         {dataProduct.map((product) => (
-          <MiniCard {...product} />
+          <MiniCard key={product.id} {...product} />
         ))}
       </div>
     </Card>

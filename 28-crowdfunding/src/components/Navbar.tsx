@@ -1,49 +1,63 @@
 import clsx from "clsx";
+import { useEffect, useRef, useState } from "react";
+import { BackgroundMenu, BackgroundHero } from "./Background";
+import { HamburgerButton } from "./Button";
+import ListItem from "./ListItem";
+import NavLists from "./NavLists";
+
+const navList = [
+  {
+    id: 1,
+    text: "About",
+  },
+  {
+    id: 2,
+    text: "Discover",
+  },
+  {
+    id: 3,
+    text: "Get Started",
+  },
+];
 
 function Navbar() {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const hamburgerEle: any = useRef();
+
+  const handleBurger = () => setIsExpanded(!isExpanded);
+
+  useEffect(() => {
+    const handleClickOutside = (e: Event) => {
+      if (!hamburgerEle.current.contains(e.target)) {
+        setIsExpanded(false);
+      }
+    };
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  });
+
   return (
-    <nav className={clsx("relative")}>
-      <div>
-        <picture>
-          <source
-            media="(min-width: 768px)"
-            srcSet="./assets/image-hero-desktop.jpg"
-          />
-          <source srcSet="./assets/image-hero-mobile.jpg" />
-          <img
-            src="./assets/image-hero-mobile.jpg"
-            className="absolute inset-0 -z-10"
-            alt=""
-          />
-        </picture>
-      </div>
+    <nav className={clsx("relative p-6")}>
+      <BackgroundHero />
+      <BackgroundMenu isExpanded={isExpanded} />
       <div
+        ref={hamburgerEle}
         className={clsx(
-          "flex justify-between p-6",
+          "relative z-10 flex justify-between",
           "md:mx-auto md:max-w-6xl md:py-12"
         )}
       >
         <div>
           <img src="./assets/logo.svg" alt="" />
         </div>
-        <div className="hidden md:block">
-          <ul className="flex gap-6 text-white">
-            <li>
-              <a href="#">About</a>
-            </li>
-            <li>
-              <a href="#">Discover</a>
-            </li>
-            <li>
-              <a href="#">Get Started</a>
-            </li>
-          </ul>
-        </div>
-        <div className="md:hidden">
-          <button>
-            <img src="./assets/icon-hamburger.svg" alt="" />
-          </button>
-        </div>
+        <NavLists isExpanded={isExpanded}>
+          {navList.map((item) => (
+            <ListItem key={item.id} {...item} />
+          ))}
+        </NavLists>
+        <HamburgerButton isExpanded={isExpanded} onClick={handleBurger} />
       </div>
     </nav>
   );
