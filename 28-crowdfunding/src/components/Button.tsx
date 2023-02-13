@@ -1,11 +1,16 @@
 import clsx from "clsx";
 
-const Button: React.FC<{ text: string }> = ({ text }) => {
+const Button: React.FC<{ text: string; isDisabled?: boolean }> = ({
+  text,
+  isDisabled = false,
+}) => {
   return (
     <button
       className={clsx(
-        "rounded-full bg-moderate-cyan px-12 py-4 font-[500] text-white"
+        "rounded-full px-12 py-4 font-[500] text-white",
+        isDisabled ? "bg-dark-gray" : "bg-moderate-cyan"
       )}
+      disabled={isDisabled}
     >
       {text}
     </button>
