@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import { Button } from "./Button";
+import MiniCardContainer from "./MiniCardContainer";
 
 const MiniCard: React.FC<{
   title: string;
@@ -8,12 +9,7 @@ const MiniCard: React.FC<{
   stock: number;
 }> = ({ title, price, desc, stock }) => {
   return (
-    <div
-      className={clsx(
-        "mb-6 rounded-lg border-2 p-8 last-of-type:mb-2",
-        stock === 0 && "opacity-50"
-      )}
-    >
+    <MiniCardContainer stock={stock}>
       <div className="md:flex md:items-center md:justify-between">
         <h3 className="text-lg font-bold">{title}</h3>
         <p className="font-medium text-moderate-cyan">
@@ -38,7 +34,7 @@ const MiniCard: React.FC<{
           text={stock === 0 ? "Out of Stock" : "Select Reward"}
         />
       </div>
-    </div>
+    </MiniCardContainer>
   );
 };
 

@@ -1,12 +1,14 @@
 import clsx from "clsx";
 import { MouseEventHandler } from "react";
 
-const Button: React.FC<{ text: string; isDisabled?: boolean }> = ({
-  text,
-  isDisabled = false,
-}) => {
+const Button: React.FC<{
+  text: string;
+  isDisabled?: boolean;
+  onClick: MouseEventHandler;
+}> = ({ text, isDisabled = false, onClick }) => {
   return (
     <button
+      onClick={onClick}
       className={clsx(
         "rounded-full px-12 py-4 font-[500] text-white",
         isDisabled ? "bg-dark-gray" : "bg-moderate-cyan"

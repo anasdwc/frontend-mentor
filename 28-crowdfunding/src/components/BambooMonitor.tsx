@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { Button, BookmarkButton } from "./Button";
 import Card from "./Card";
 
-function BambooMonitor() {
+const BambooMonitor: React.FC<{ toggleModal: any }> = ({ toggleModal }) => {
   return (
     <Card>
       <div>
@@ -21,11 +21,11 @@ function BambooMonitor() {
         </p>
       </div>
       <div className="flex justify-between">
-        <Button text="Back this project" />
+        <Button text="Back this project" onClick={toggleModal} />
         <BookmarkButton />
       </div>
     </Card>
   );
-}
+};
 
 export default BambooMonitor;
