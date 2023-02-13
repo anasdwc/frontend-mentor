@@ -22,7 +22,7 @@ const BackgroundHero = () => {
         <source srcSet="./assets/image-hero-mobile.jpg" />
         <img
           src="./assets/image-hero-mobile.jpg"
-          className="absolute inset-0 -z-10"
+          className="absolute inset-0 -z-10 w-full"
           alt=""
         />
       </picture>
