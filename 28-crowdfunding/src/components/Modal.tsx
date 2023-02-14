@@ -1,13 +1,15 @@
 import Card from "./Card";
 import ModalCard from "./ModalCard";
 import dataProduct from "../data/dataProduct";
+import { useState } from "react";
 
 const Modal: React.FC<{
   isOpen: boolean;
   toggleModal: any;
   project: string;
   setProject: any;
-}> = ({ isOpen, toggleModal, project, setProject }) => {
+  toggleThanks: any;
+}> = ({ isOpen, toggleModal, project, setProject, toggleThanks }) => {
   return (
     <Card customCss="!absolute inset-0 h-fit !my-32 overflow-hidden">
       <div className="flex justify-between">
@@ -28,6 +30,7 @@ const Modal: React.FC<{
           desc="Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email"
           project={project}
           setProject={setProject}
+          toggleThanks={toggleThanks}
         />
         {dataProduct.map((product) => (
           <ModalCard
@@ -35,6 +38,7 @@ const Modal: React.FC<{
             {...product}
             project={project}
             setProject={setProject}
+            toggleThanks={toggleThanks}
           />
         ))}
       </div>

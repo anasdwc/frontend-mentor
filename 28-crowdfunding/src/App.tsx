@@ -8,10 +8,18 @@ import Stats from "./components/Stats";
 import About from "./components/About";
 import Modal from "./components/Modal";
 import { useState } from "react";
+import ModalThanks from "./components/ModalThanks";
+import { BackgroundModal } from "./components/Background";
 
 function App() {
-  const [modal, setModal] = useState(true);
+  const [modal, setModal] = useState(false);
   const [project, setProject] = useState("");
+  const [openThanks, setOpenThanks] = useState(false);
+
+  const toggleThanks = () => {
+    setModal(false);
+    setOpenThanks(!openThanks);
+  };
 
   const toggleModal = () => setModal(!modal);
 
@@ -28,13 +36,20 @@ function App() {
         />
         {modal && (
           <>
-            <div className="absolute inset-0 w-screen bg-black opacity-25"></div>
+            <BackgroundModal />
             <Modal
+              toggleThanks={toggleThanks}
               isOpen={modal}
               toggleModal={toggleModal}
               project={project}
               setProject={setProject}
             />
+          </>
+        )}
+        {openThanks && (
+          <>
+            <BackgroundModal />
+            <ModalThanks closeModal={() => setOpenThanks(false)} />
           </>
         )}
       </main>

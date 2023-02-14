@@ -10,7 +10,8 @@ const ModalCard: React.FC<{
   stock: number;
   project: any;
   setProject: any;
-}> = ({ title, price, desc, stock, project, setProject }) => {
+  toggleThanks: any;
+}> = ({ title, price, desc, stock, project, setProject, toggleThanks }) => {
   const nameValue = title.toLowerCase().split(" ").join("_");
   const isChecked = project === nameValue;
 
@@ -74,10 +75,9 @@ const ModalCard: React.FC<{
                     </span>
                   </div>
                 )}
-
                 <Button
                   text="Continue"
-                  onClick={() => console.log("success")}
+                  onClick={toggleThanks}
                   customCss="!p-3 text-sm"
                 />
               </div>

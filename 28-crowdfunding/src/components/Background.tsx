@@ -30,4 +30,8 @@ const BackgroundHero = () => {
   );
 };
 
-export { BackgroundMenu, BackgroundHero };
+const BackgroundModal = () => {
+  return <div className="absolute inset-0 w-screen bg-black opacity-25"></div>;
+};
+
+export { BackgroundMenu, BackgroundHero, BackgroundModal };
