@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor | Crowdfunding | React & TailwindCSS coding challenge solution](https://www.frontendmentor.io/solutions/crowdfunding-react-and-tailwindcss-FK4SDa-dW2)
+- Live Site URL: [Frontend Mentor | Crowdfunding product page](https://fm-junior-crowdfunding.netlify.app/)
 
 ## My process
 
