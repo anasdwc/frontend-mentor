@@ -4,7 +4,10 @@ import Card from "./Card";
 import MiniCard from "./MiniCard";
 import dataProduct from "../data/dataProduct";
 
-function About() {
+const About: React.FC<{ modal: boolean; toggleModal: any }> = ({
+  modal,
+  toggleModal,
+}) => {
   return (
     <Card>
       <div className="[&>p]:my-6 [&>p]:font-[500] [&>p]:text-dark-gray">
@@ -24,11 +27,11 @@ function About() {
       </div>
       <div>
         {dataProduct.map((product) => (
-          <MiniCard key={product.id} {...product} />
+          <MiniCard key={product.id} {...product} toggleModal={toggleModal} />
         ))}
       </div>
     </Card>
   );
-}
+};
 
 export default About;

@@ -7,7 +7,8 @@ const MiniCard: React.FC<{
   price: number;
   desc: string;
   stock: number;
-}> = ({ title, price, desc, stock }) => {
+  toggleModal: any;
+}> = ({ title, price, desc, stock, toggleModal }) => {
   return (
     <MiniCardContainer stock={stock}>
       <div className="md:flex md:items-center md:justify-between">
@@ -30,6 +31,7 @@ const MiniCard: React.FC<{
           <span className="text-base font-medium text-dark-gray">left</span>
         </p>
         <Button
+          onClick={toggleModal}
           isDisabled={stock === 0 ? true : false}
           text={stock === 0 ? "Out of Stock" : "Select Reward"}
         />

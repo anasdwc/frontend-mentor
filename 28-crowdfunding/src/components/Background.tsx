@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-const BackgroundMenu: React.FC<{ isExpanded: boolean }> = ({ isExpanded }) => {
+const BackgroundMenu: React.FC<{ isExpanded?: boolean }> = ({ isExpanded }) => {
   return (
     <div
       className={clsx(

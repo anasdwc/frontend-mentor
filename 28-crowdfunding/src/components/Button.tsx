@@ -5,13 +5,15 @@ const Button: React.FC<{
   text: string;
   isDisabled?: boolean;
   onClick: MouseEventHandler;
-}> = ({ text, isDisabled = false, onClick }) => {
+  customCss?: string;
+}> = ({ text, isDisabled = false, onClick, customCss }) => {
   return (
     <button
       onClick={onClick}
       className={clsx(
         "rounded-full px-12 py-4 font-[500] text-white",
-        isDisabled ? "bg-dark-gray" : "bg-moderate-cyan"
+        isDisabled ? "bg-dark-gray" : "bg-moderate-cyan",
+        customCss && customCss
       )}
       disabled={isDisabled}
     >

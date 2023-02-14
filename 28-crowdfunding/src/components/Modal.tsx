@@ -2,12 +2,14 @@ import Card from "./Card";
 import ModalCard from "./ModalCard";
 import dataProduct from "../data/dataProduct";
 
-const Modal: React.FC<{ isOpen: boolean; toggleModal: any }> = ({
-  isOpen,
-  toggleModal,
-}) => {
+const Modal: React.FC<{
+  isOpen: boolean;
+  toggleModal: any;
+  project: string;
+  setProject: any;
+}> = ({ isOpen, toggleModal, project, setProject }) => {
   return (
-    <Card customCss="!absolute inset-0">
+    <Card customCss="!absolute inset-0 h-fit !my-32 overflow-hidden">
       <div className="flex justify-between">
         <h2 className="text-xl font-bold">Back this project</h2>
         <button onClick={toggleModal}>
@@ -24,9 +26,16 @@ const Modal: React.FC<{ isOpen: boolean; toggleModal: any }> = ({
         <ModalCard
           title="Pledge with no reward"
           desc="Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email"
+          project={project}
+          setProject={setProject}
         />
         {dataProduct.map((product) => (
-          <ModalCard key={product.id} {...product} />
+          <ModalCard
+            key={product.id}
+            {...product}
+            project={project}
+            setProject={setProject}
+          />
         ))}
       </div>
     </Card>

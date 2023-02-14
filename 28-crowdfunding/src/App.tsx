@@ -11,17 +11,28 @@ import { useState } from "react";
 
 function App() {
   const [modal, setModal] = useState(true);
+  const [project, setProject] = useState("");
 
   const toggleModal = () => setModal(!modal);
 
   return (
-    <div className="App relative">
+    <div className="App relative pb-8">
       <Header />
       <main>
         <BambooMonitor toggleModal={toggleModal} />
         <Stats />
-        <About />
-        {modal && <Modal isOpen={modal} toggleModal={toggleModal} />}
+        <About modal={modal} toggleModal={toggleModal} />
+        {modal && (
+          <>
+            <div className="absolute inset-0 w-screen bg-black opacity-25"></div>
+            <Modal
+              isOpen={modal}
+              toggleModal={toggleModal}
+              project={project}
+              setProject={setProject}
+            />
+          </>
+        )}
       </main>
     </div>
   );
