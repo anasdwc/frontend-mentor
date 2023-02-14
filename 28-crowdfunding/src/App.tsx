@@ -21,7 +21,11 @@ function App() {
       <main>
         <BambooMonitor toggleModal={toggleModal} />
         <Stats />
-        <About modal={modal} toggleModal={toggleModal} />
+        <About
+          modal={modal}
+          toggleModal={toggleModal}
+          setProject={setProject}
+        />
         {modal && (
           <>
             <div className="absolute inset-0 w-screen bg-black opacity-25"></div>

@@ -4,10 +4,11 @@ import Card from "./Card";
 import MiniCard from "./MiniCard";
 import dataProduct from "../data/dataProduct";
 
-const About: React.FC<{ modal: boolean; toggleModal: any }> = ({
-  modal,
-  toggleModal,
-}) => {
+const About: React.FC<{
+  modal: boolean;
+  toggleModal: any;
+  setProject: any;
+}> = ({ modal, toggleModal, setProject }) => {
   return (
     <Card>
       <div className="[&>p]:my-6 [&>p]:font-[500] [&>p]:text-dark-gray">
@@ -27,7 +28,12 @@ const About: React.FC<{ modal: boolean; toggleModal: any }> = ({
       </div>
       <div>
         {dataProduct.map((product) => (
-          <MiniCard key={product.id} {...product} toggleModal={toggleModal} />
+          <MiniCard
+            key={product.id}
+            {...product}
+            toggleModal={toggleModal}
+            setProject={setProject}
+          />
         ))}
       </div>
     </Card>

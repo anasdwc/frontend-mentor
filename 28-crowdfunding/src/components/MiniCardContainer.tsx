@@ -4,7 +4,7 @@ import React from "react";
 const MiniCardContainer: React.FC<{
   stock: number;
   children: React.ReactNode;
-  isChecked: boolean;
+  isChecked?: boolean;
 }> = ({ stock, children, isChecked }) => {
   return (
     <div
