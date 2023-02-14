@@ -65,7 +65,7 @@ const ModalCard: React.FC<{
                     <input
                       type="number"
                       name="pledge"
-                      className="w-full rounded-full border-2 px-4 py-2 pl-10 font-bold"
+                      className="h-full w-full rounded-full border-2 px-4 py-2 pl-10 font-bold"
                       id="pledge"
                       value={price}
                     />
@@ -78,7 +78,7 @@ const ModalCard: React.FC<{
                 <Button
                   text="Continue"
                   onClick={() => console.log("success")}
-                  customCss="!p-4 text-sm"
+                  customCss="!p-3 text-sm"
                 />
               </div>
             </label>
