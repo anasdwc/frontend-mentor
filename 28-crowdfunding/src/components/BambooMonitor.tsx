@@ -1,8 +1,13 @@
 import clsx from "clsx";
+import { useState } from "react";
 import { Button, BookmarkButton } from "./Button";
 import Card from "./Card";
 
 const BambooMonitor: React.FC<{ toggleModal: any }> = ({ toggleModal }) => {
+  const [isBookmarked, setIsBookmarked] = useState(false);
+
+  const toggleBookmark = () => setIsBookmarked(!isBookmarked);
+
   return (
     <Card>
       <div>
@@ -22,7 +27,7 @@ const BambooMonitor: React.FC<{ toggleModal: any }> = ({ toggleModal }) => {
       </div>
       <div className="flex justify-between">
         <Button text="Back this project" onClick={toggleModal} />
-        <BookmarkButton />
+        <BookmarkButton isBookmarked={isBookmarked} onClick={toggleBookmark} />
       </div>
     </Card>
   );

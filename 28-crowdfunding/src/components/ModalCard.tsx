@@ -19,7 +19,7 @@ const ModalCard: React.FC<{
 
   return (
     <MiniCardContainer stock={stock} isChecked={isChecked}>
-      <label>
+      <label className="group cursor-pointer">
         <div className="md:grid md:grid-cols-[5%_65%_27%] md:grid-rows-2 md:gap-2">
           <div className="mb-6 flex items-center gap-4 md:col-start-1 md:col-end-3 md:mb-0">
             <div className="flex h-6 w-6 items-center justify-center rounded-full border-2">
@@ -38,7 +38,9 @@ const ModalCard: React.FC<{
               />
             </div>
             <div className="md:flex md:items-center md:gap-4">
-              <h3 className="font-bold">{title}</h3>
+              <h3 className="font-bold group-hover:text-moderate-cyan group-active:text-moderate-cyan">
+                {title}
+              </h3>
               {price && (
                 <p className="text-sm font-medium text-moderate-cyan">
                   Pledge ${price} or more
@@ -90,7 +92,7 @@ const ModalCard: React.FC<{
                 <Button
                   text="Continue"
                   onClick={toggleThanks}
-                  customCss="!p-3 text-sm"
+                  customCss="!p-3 text-sm "
                 />
               </div>
             </label>

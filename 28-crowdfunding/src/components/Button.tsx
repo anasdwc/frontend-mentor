@@ -11,7 +11,7 @@ const Button: React.FC<{
     <button
       onClick={onClick}
       className={clsx(
-        "rounded-full px-12 py-4 font-[500] text-white",
+        "rounded-full px-12 py-4 font-[500] text-white hover:bg-dark-cyan",
         isDisabled ? "bg-dark-gray" : "bg-moderate-cyan",
         customCss && customCss
       )}
@@ -22,15 +22,28 @@ const Button: React.FC<{
   );
 };
 
-const BookmarkButton = () => {
+const BookmarkButton: React.FC<{
+  onClick: MouseEventHandler;
+  isBookmarked: boolean;
+}> = ({ onClick, isBookmarked }) => {
   return (
     <button
+      onClick={onClick}
       className={clsx(
-        "md:flex md:items-center md:gap-4 md:rounded-full md:bg-gray-200 md:pr-6 md:font-bold md:text-dark-gray"
+        "hover:bg-slate-200 md:flex md:items-center md:gap-4 md:rounded-full md:bg-gray-200 md:pr-6 md:font-bold",
+        isBookmarked
+          ? "fill-moderate-cyan md:bg-slate-100 md:text-moderate-cyan"
+          : "md:text-dark-gray"
       )}
     >
-      <img src="./assets/icon-bookmark.svg" alt="" />
-      <p className={clsx("hidden", "md:block")}>Bookmark</p>
+      <img
+        src="./assets/icon-bookmark.svg"
+        className="fill-moderate-cyan"
+        alt=""
+      />
+      <p className={clsx("hidden", "md:block")}>
+        {isBookmarked ? "Bookmarked" : "Bookmark"}
+      </p>
     </button>
   );
 };
