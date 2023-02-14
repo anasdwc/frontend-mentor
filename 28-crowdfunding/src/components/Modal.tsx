@@ -31,6 +31,8 @@ const Modal: React.FC<{
           project={project}
           setProject={setProject}
           toggleThanks={toggleThanks}
+          price={-1}
+          stock={-1}
         />
         {dataProduct.map((product) => (
           <ModalCard

@@ -41,7 +41,7 @@ const ModalCard: React.FC<{
               <h3 className="font-bold group-hover:text-moderate-cyan group-active:text-moderate-cyan">
                 {title}
               </h3>
-              {price && (
+              {price >= 0 && (
                 <p className="text-sm font-medium text-moderate-cyan">
                   Pledge ${price} or more
                 </p>
@@ -70,11 +70,11 @@ const ModalCard: React.FC<{
               </p>
               <div
                 className={clsx(
-                  "grid grid-cols-2 justify-between gap-x-6",
-                  price ? "grid-cols-2" : "grid-cols-1"
+                  "grid justify-between gap-x-6",
+                  price >= 0 ? "grid-cols-2" : "grid-cols-1"
                 )}
               >
-                {price && (
+                {price >= 0 && (
                   <div className="relative">
                     <input
                       type="number"
