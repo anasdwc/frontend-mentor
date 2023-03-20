@@ -5,6 +5,7 @@ import GlobalStyles from "./components/styles/Global";
 import brandLogo from "./assets/logo.svg";
 import burgerButton from "./assets/icon-menu.svg";
 import imageHeroMobile from "./assets/image-hero-mobile.png";
+import Body from "./components/Body";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       />
       <main>
         <FullImage imgSrc={imageHeroMobile} />
+        <Body />
       </main>
     </>
   );
