@@ -1,8 +1,13 @@
+import IconList from "./IconList";
 import { Button } from "./styles/Button.styled";
 import { Container } from "./styles/Container.styled";
 import { Paragraph, Title } from "./styles/Text.styled";
 
-function Body() {
+type Body = {
+  dataClient: Array<object>;
+};
+
+function Body({ dataClient }: Body) {
   return (
     <Container>
       <Title>Make remote work</Title>
@@ -11,6 +16,7 @@ function Body() {
         create team rituals, and watch productivity soar.
       </Paragraph>
       <Button>Learn more</Button>
+      <IconList dataClient={dataClient} />
     </Container>
   );
 }

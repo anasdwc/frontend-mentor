@@ -8,5 +8,5 @@ export const Button = styled.button`
   padding: 1rem 1.5rem;
   border-radius: 1rem;
   display: inherit;
-  margin: 0 auto;
+  margin: 1.5rem auto;
 `;
