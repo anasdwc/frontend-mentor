@@ -9,4 +9,6 @@ export const Button = styled.button`
   border-radius: 1rem;
   display: inherit;
   margin: 1.5rem auto;
+  color: ${({ theme }) => theme.colors.white};
+  cursor: pointer;
 `;

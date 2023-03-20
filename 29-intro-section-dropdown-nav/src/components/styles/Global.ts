@@ -6,6 +6,7 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     font-size: 16px;
+    font-family: 'Epilogue'
   }
 `;
 
