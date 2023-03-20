@@ -1,8 +1,10 @@
 import Navbar from "./components/Navbar";
+import FullImage from "./components/FullImage";
 import GlobalStyles from "./components/styles/Global";
 
 import brandLogo from "./assets/logo.svg";
 import burgerButton from "./assets/icon-menu.svg";
+import imageHeroMobile from "./assets/image-hero-mobile.png";
 
 function App() {
   return (
@@ -12,9 +14,9 @@ function App() {
         brandLogo={brandLogo}
         burgerIcon={burgerButton}
       />
-      <div>
-        <h2>Hello World</h2>
-      </div>
+      <main>
+        <FullImage imgSrc={imageHeroMobile} />
+      </main>
     </>
   );
 }
