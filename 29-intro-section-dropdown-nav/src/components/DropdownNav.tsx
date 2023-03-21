@@ -1,6 +1,6 @@
 import { Dropdown, DropdownChild, Link } from "./styles/Navbar.styled";
 import iconArrowDown from "../assets/icon-arrow-down.svg";
-import { JSXElementConstructor, ReactElement } from "react";
+import { JSXElementConstructor, ReactElement, useState } from "react";
 
 type Dropdown = {
   childs: Object[];
@@ -8,14 +8,20 @@ type Dropdown = {
 };
 
 function DropdownNav(props: Dropdown): ReactElement {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const handleClick = () => {
+    setIsExpanded(!isExpanded);
+  };
+
   return (
-    <Dropdown>
+    <Dropdown onClick={handleClick}>
       <Link>{props.title}</Link>
       <img
         src={iconArrowDown}
         alt=""
       />{" "}
-      <DropdownChild>
+      <DropdownChild isExpanded={isExpanded}>
         {props.childs.map(
           (child: any): ReactElement => (
             <li key={child.id}>

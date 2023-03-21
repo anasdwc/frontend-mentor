@@ -41,7 +41,11 @@ export const Dropdown = styled.li`
   }
 `;
 
-export const DropdownChild = styled.ul`
+type PropsDropdownChild = {
+  isExpanded: boolean;
+};
+
+export const DropdownChild = styled.ul<PropsDropdownChild>`
   position: absolute;
   top: 2.5rem;
   right: 0;
@@ -51,6 +55,7 @@ export const DropdownChild = styled.ul`
   margin-left: 1rem;
   border-radius: 0.5rem;
   width: max-content;
+  display: ${(props) => (props.isExpanded ? "block" : "none")};
 
   & li {
     display: flex;
