@@ -20,18 +20,22 @@ import {
 
 const dataClient = [
   {
+    id: 1,
     name: "Databiz",
     logoSrc: databizLogo,
   },
   {
+    id: 2,
     name: "Audiophile",
     logoSrc: audiophileLogo,
   },
   {
+    id: 3,
     name: "Meet",
     logoSrc: meetLogo,
   },
   {
+    id: 4,
     name: "Maker",
     logoSrc: makerLogo,
   },

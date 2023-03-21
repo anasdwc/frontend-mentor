@@ -10,16 +10,54 @@ import {
   NavbarStyled,
 } from "./styles/Navbar.styled";
 
-import iconArrowDown from "../assets/icon-arrow-down.svg";
 import iconTodoList from "../assets/icon-todo.svg";
 import iconCalendar from "../assets/icon-calendar.svg";
 import iconReminders from "../assets/icon-reminders.svg";
 import iconPlanning from "../assets/icon-planning.svg";
+import DropdownNav from "./DropdownNav";
 
 type Navbar = {
   brandLogo: string;
   burgerIcon: string;
 };
+
+const featuresDropdown = [
+  {
+    id: 1,
+    title: "Todo List",
+    icon: iconTodoList,
+  },
+  {
+    id: 2,
+    title: "Calendar",
+    icon: iconCalendar,
+  },
+  {
+    id: 3,
+    title: "Reminders",
+    icon: iconReminders,
+  },
+  {
+    id: 4,
+    title: "Planning",
+    icon: iconPlanning,
+  },
+];
+
+const companyDropdown = [
+  {
+    id: 1,
+    title: "History",
+  },
+  {
+    id: 2,
+    title: "Our Team",
+  },
+  {
+    id: 3,
+    title: "Blog",
+  },
+];
 
 function Navbar(props: Navbar) {
   return (
@@ -27,61 +65,14 @@ function Navbar(props: Navbar) {
       <FlexContainer>
         <BrandLogo src={props.brandLogo} />
         <NavbarList>
-          <Dropdown>
-            <Link>Features </Link>
-            <img
-              src={iconArrowDown}
-              alt=""
-            />{" "}
-            <DropdownChild>
-              <li>
-                <img
-                  src={iconTodoList}
-                  alt=""
-                />
-                <Link>Todo List</Link>
-              </li>
-              <li>
-                <img
-                  src={iconCalendar}
-                  alt=""
-                />
-                <Link>Calendar</Link>
-              </li>
-              <li>
-                <img
-                  src={iconReminders}
-                  alt=""
-                />
-                <Link>Reminders</Link>
-              </li>
-              <li>
-                <img
-                  src={iconPlanning}
-                  alt=""
-                />
-                <Link>Planning</Link>
-              </li>
-            </DropdownChild>
-          </Dropdown>
-          <Dropdown>
-            <Link>Company</Link>
-            <img
-              src={iconArrowDown}
-              alt=""
-            />{" "}
-            <DropdownChild>
-              <li>
-                <Link>History</Link>
-              </li>
-              <li>
-                <Link>Our Team</Link>
-              </li>
-              <li>
-                <Link>Blog</Link>
-              </li>
-            </DropdownChild>
-          </Dropdown>
+          <DropdownNav
+            title="Features"
+            childs={featuresDropdown}
+          />
+          <DropdownNav
+            title="Company"
+            childs={companyDropdown}
+          />
           <li>
             <Link>Career</Link>
           </li>

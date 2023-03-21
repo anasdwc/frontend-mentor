@@ -10,8 +10,11 @@ function IconList({ dataClient }: iconList) {
   return (
     <div>
       <ListWrapper>
-        {dataClient.map((item) => (
-          <li style={{ margin: "0 auto" }}>
+        {dataClient.map((item: any) => (
+          <li
+            key={item.id}
+            style={{ margin: "0 auto" }}
+          >
             <Icon
               iconSrc={item.logoSrc}
               alt={item.name}
