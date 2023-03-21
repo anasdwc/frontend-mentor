@@ -4,8 +4,14 @@ export const ImageMobile = styled.img`
   width: 100%;
 `;
 
+export const ImageDesktop = styled.img`
+  max-height: 500px;
+  order: 2;
+`;
+
 export const IconImage = styled.img`
-  width: 100%;
+  width: auto;
+  max-height: 30px;
 `;
 
 export const BrandLogo = styled.img`

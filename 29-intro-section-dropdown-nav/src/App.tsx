@@ -1,17 +1,22 @@
 import Navbar from "./components/Navbar";
 import FullImage from "./components/FullImage";
+import Body from "./components/Body";
 import GlobalStyles from "./components/styles/Global";
 
 import brandLogo from "./assets/logo.svg";
 import burgerButton from "./assets/icon-menu.svg";
 import imageHeroMobile from "./assets/image-hero-mobile.png";
-import Body from "./components/Body";
+import imageHeroDesktop from "./assets/image-hero-desktop.png";
 
 import databizLogo from "./assets/client-databiz.svg";
 import audiophileLogo from "./assets/client-audiophile.svg";
 import meetLogo from "./assets/client-meet.svg";
 import makerLogo from "./assets/client-maker.svg";
 import { ThemeProvider } from "styled-components";
+import {
+  CenterFlex,
+  FlexContainer,
+} from "./components/styles/Container.styled";
 
 const dataClient = [
   {
@@ -49,10 +54,13 @@ function App() {
           brandLogo={brandLogo}
           burgerIcon={burgerButton}
         />
-        <main>
-          <FullImage imgSrc={imageHeroMobile} />
+        <CenterFlex>
+          <FullImage
+            mobileImg={imageHeroMobile}
+            desktopImg={imageHeroDesktop}
+          />
           <Body dataClient={dataClient} />
-        </main>
+        </CenterFlex>
       </>
     </ThemeProvider>
   );

@@ -1,13 +1,18 @@
-import { ImageMobile } from "./styles/Image.styled";
+import { ImageDesktop, ImageMobile } from "./styles/Image.styled";
 
 type FullImage = {
-  imgSrc: string;
+  mobileImg: string;
+  desktopImg: string;
 };
 
 function FullImage(props: FullImage) {
   return (
     <>
-      <ImageMobile src={props.imgSrc} />
+      {window.innerWidth > 768 ? (
+        <ImageDesktop src={props.desktopImg} />
+      ) : (
+        <ImageMobile src={props.mobileImg} />
+      )}
     </>
   );
 }

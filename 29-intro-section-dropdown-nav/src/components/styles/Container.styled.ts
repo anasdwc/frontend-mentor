@@ -5,6 +5,14 @@ export const Container = styled.div`
 `;
 
 export const FlexContainer = styled.div`
-  display: flex;
-  align-items: center;
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
+`;
+
+export const CenterFlex = styled(FlexContainer)`
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 1rem auto 0;
 `;

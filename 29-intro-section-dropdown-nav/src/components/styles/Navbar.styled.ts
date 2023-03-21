@@ -5,6 +5,10 @@ export const NavbarStyled = styled.nav`
   padding: 1.5rem 1rem;
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: 768px) {
+    padding: 2rem 3rem;
+  }
 `;
 
 export const BurgerButton = styled.button`
@@ -23,9 +27,6 @@ export const NavbarList = styled.ul`
   @media (min-width: 768px) {
     display: flex;
     gap: 1.5rem;
-
-    & a {
-    }
   }
 `;
 

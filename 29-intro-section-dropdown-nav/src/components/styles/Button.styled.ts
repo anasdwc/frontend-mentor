@@ -11,4 +11,8 @@ export const Button = styled.button`
   margin: 1.5rem auto;
   color: ${({ theme }) => theme.colors.white};
   cursor: pointer;
+
+  @media (min-width: 768px) {
+    margin: 1.5rem 0 3rem;
+  }
 `;
