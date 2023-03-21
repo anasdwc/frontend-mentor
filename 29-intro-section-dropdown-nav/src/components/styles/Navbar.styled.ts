@@ -34,9 +34,33 @@ export const Dropdown = styled.li`
   display: flex;
   align-items: center;
   padding-right: 0.5rem;
+  position: relative;
 
   & a {
     padding-right: 0.5rem;
+  }
+`;
+
+export const DropdownChild = styled.ul`
+  position: absolute;
+  top: 2.5rem;
+  right: 0;
+  background-color: ${({ theme }) => theme.colors.white};
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem 1.5rem;
+  margin-left: 1rem;
+  border-radius: 0.5rem;
+  width: max-content;
+
+  & li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  & a {
+    padding: 0.5rem 0;
+    display: inline-block;
   }
 `;
 
@@ -46,6 +70,10 @@ export const Link = styled.a`
   padding: 0.5rem 1rem;
   display: inline-block;
   cursor: pointer;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.black};
+  }
 `;
 
 export const LinkBorder = styled(Link)`
