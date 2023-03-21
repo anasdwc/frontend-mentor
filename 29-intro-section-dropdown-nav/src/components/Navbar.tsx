@@ -2,11 +2,14 @@ import { FlexContainer } from "./styles/Container.styled";
 import { BrandLogo } from "./styles/Image.styled";
 import {
   BurgerButton,
+  Dropdown,
   Link,
   LinkBorder,
   NavbarList,
   NavbarStyled,
 } from "./styles/Navbar.styled";
+
+import iconArrowDown from "../assets/icon-arrow-down.svg";
 
 type Navbar = {
   brandLogo: string;
@@ -19,12 +22,20 @@ function Navbar(props: Navbar) {
       <FlexContainer>
         <BrandLogo src={props.brandLogo} />
         <NavbarList>
-          <li>
-            <Link>Features</Link>
-          </li>
-          <li>
+          <Dropdown>
+            <Link>Features </Link>
+            <img
+              src={iconArrowDown}
+              alt=""
+            />{" "}
+          </Dropdown>
+          <Dropdown>
             <Link>Company</Link>
-          </li>
+            <img
+              src={iconArrowDown}
+              alt=""
+            />{" "}
+          </Dropdown>
           <li>
             <Link>Career</Link>
           </li>

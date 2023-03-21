@@ -30,10 +30,21 @@ export const NavbarList = styled.ul`
   }
 `;
 
+export const Dropdown = styled.li`
+  display: flex;
+  align-items: center;
+  padding-right: 0.5rem;
+
+  & a {
+    padding-right: 0.5rem;
+  }
+`;
+
 export const Link = styled.a`
   color: ${({ theme }) => theme.colors.gray};
   text-decoration: none;
   padding: 0.5rem 1rem;
+  display: inline-block;
   cursor: pointer;
 `;
 
