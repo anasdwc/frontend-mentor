@@ -7,3 +7,7 @@ export const ImageMobile = styled.img`
 export const IconImage = styled.img`
   width: 100%;
 `;
+
+export const BrandLogo = styled.img`
+  margin-right: 3rem;
+`;
