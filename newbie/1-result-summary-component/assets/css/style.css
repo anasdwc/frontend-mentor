@@ -7,3 +7,7 @@
 /* Components */
 @import url('./component/container.css');
 @import url('./component/card.css');
+@import url('./component/footer.css');
+
+/* Responsive */
+@import url('./utils/responsive.css');
