@@ -1,0 +1,13 @@
+body,
+main {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    flex-direction: column;
+}
+
+body.h-screen {
+    height: 100vh;
+}

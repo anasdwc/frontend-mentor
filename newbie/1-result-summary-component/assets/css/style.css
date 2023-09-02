@@ -3,3 +3,7 @@
 @import url('./utils/color.css');
 @import url('./utils/fonts.css');
 @import url('./utils/space.css');
+
+/* Components */
+@import url('./component/container.css');
+@import url('./component/card.css');
