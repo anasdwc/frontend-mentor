@@ -1,48 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | FAQ accordion</title>
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/images/favicon-32x32.png"
+        />
+        <link
+            rel="stylesheet"
+            href="./style.css"
+        />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+        <!-- UNO -->
+        <script src="./js/uno.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime/mini.global.js"></script>
 
-  FAQs
+        <!-- JS -->
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"
+        ></script>
+        <script src="./js/script.js"></script>
 
-  What is Frontend Mentor, and how will it help me?
+        <title>Frontend Mentor | FAQ accordion</title>
 
-  Frontend Mentor offers realistic coding challenges to help developers improve their 
-  frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for 
-  all levels and ideal for portfolio building.
-
-  Is Frontend Mentor free?
-
-  Yes, Frontend Mentor offers both free and premium coding challenges, with the free 
-  option providing access to a range of projects suitable for all skill levels.
-
-  Can I use Frontend Mentor projects in my portfolio?
-
-  Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
-  way to showcase your skills to potential employers!
-
-  How can I get help if I'm stuck on a Frontend Mentor challenge?
-  
-  The best place to get help is inside Frontend Mentor's Discord community. There's a help 
-  channel where you can ask questions and seek support from other community members.
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+        <style>
+            .attribution {
+                font-size: 11px;
+                text-align: center;
+            }
+            .attribution a {
+                color: hsl(228, 45%, 44%);
+            }
+        </style>
+    </head>
+    <body class="bg-light-pink">
+        <picture>
+            <source
+                media="(min-width: 992px)"
+                srcset="./assets/images/background-pattern-desktop.svg"
+            />
+            <img
+                src="./assets/images/background-pattern-mobile.svg"
+                alt=""
+                class="w-full"
+            />
+        </picture>
+        <main
+            class="box container flex flex-col bg-white p-2xl mx-4 rounded-3 shadow-lg -mt-20 relative lg:max-w-2xl lg:mx-auto lg:-mt-36"
+            un-cloak
+        >
+            <div class="box__title flex items-center gap-lg">
+                <img
+                    src="./assets/images/icon-star.svg"
+                    alt=""
+                    style="width: 24px"
+                />
+                <h1 class="text-dark-purple font-xl">FAQs</h1>
+            </div>
+            <div
+                class="box__list"
+                x-data="accordionSingle"
+            >
+                <div
+                    class="box__item py-lg border-solid border-0 border-b-2 border-light-pink last:pb-0 last:border-b-0"
+                    data-index="1"
+                    x-ref="accordionItem1"
+                >
+                    <div
+                        class="header group flex items-center justify-between gap-lg"
+                        @click="setIndex($el)"
+                    >
+                        <h2
+                            class="text-md text-dark-purple font-semibold group-hover:text-purple group-hover:font-bold"
+                        >
+                            How is Frontend Mentor, and how will it help me?
+                        </h2>
+                        <div class="icon">
+                            <img
+                                src="./assets/images/icon-minus.svg"
+                                alt=""
+                                :src="show == $refs.accordionItem1.dataset.index ? './assets/images/icon-minus.svg' : './assets/images/icon-plus.svg' "
+                            />
+                        </div>
+                    </div>
+                    <div
+                        class="content max-h-0 overflow-hidden transition-all duration-500"
+                        :style="show == $refs.accordionItem1.dataset.index ? `max-height: ${$el.scrollHeight}px` : 'max-height: 0px' "
+                    >
+                        <p class="text-sm pt-lg text-grayish-purple leading-6">
+                            Frontend Mentor offers realistic coding challenges
+                            to help developers improve their frontend coding
+                            skills with projects in HTML, CSS, and JavaScript.
+                            It's suitable for all levels and ideal for
+                            portofolio building.
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="box__item py-lg border-solid border-0 border-b-2 border-light-pink last:pb-0 last:border-b-0"
+                    data-index="2"
+                    x-ref="accordionItem2"
+                >
+                    <div
+                        class="header group flex items-center justify-between gap-lg"
+                        @click="setIndex($el)"
+                    >
+                        <h2
+                            class="text-md text-dark-purple font-semibold group-hover:text-purple group-hover:font-bold"
+                        >
+                            Is Frontend Mentor free?
+                        </h2>
+                        <div class="icon">
+                            <img
+                                src="./assets/images/icon-minus.svg"
+                                alt=""
+                                :src="show == $refs.accordionItem2.dataset.index ? './assets/images/icon-minus.svg' : './assets/images/icon-plus.svg' "
+                            />
+                        </div>
+                    </div>
+                    <div
+                        class="content max-h-0 overflow-hidden transition-all duration-500"
+                        :style="show == $refs.accordionItem2.dataset.index && `max-height: ${$el.scrollHeight}px` "
+                    >
+                        <p class="text-sm pt-lg text-grayish-purple leading-6">
+                            Frontend Mentor offers realistic coding challenges
+                            to help developers improve their frontend coding
+                            skills with projects in HTML, CSS, and JavaScript.
+                            It's suitable for all levels and ideal for
+                            portofolio building.
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="box__item py-lg border-solid border-0 border-b-2 border-light-pink last:pb-0 last:border-b-0"
+                    data-index="3"
+                    x-ref="accordionItem3"
+                >
+                    <div
+                        class="header group flex items-center justify-between gap-lg"
+                        @click="setIndex($el)"
+                    >
+                        <h2
+                            class="text-md text-dark-purple font-semibold group-hover:text-purple group-hover:font-bold"
+                        >
+                            Can I use Frontend Mentor projects in my portofolio?
+                        </h2>
+                        <div class="icon">
+                            <img
+                                src="./assets/images/icon-minus.svg"
+                                alt=""
+                                :src="show == $refs.accordionItem3.dataset.index ? './assets/images/icon-minus.svg' : './assets/images/icon-plus.svg' "
+                            />
+                        </div>
+                    </div>
+                    <div
+                        class="content max-h-0 overflow-hidden transition-all duration-500"
+                        :style="show == $refs.accordionItem3.dataset.index ? `max-height: ${$el.scrollHeight}px` : 'max-height: `0px` ' "
+                    >
+                        <p class="text-sm pt-lg text-grayish-purple leading-6">
+                            Frontend Mentor offers realistic coding challenges
+                            to help developers improve their frontend coding
+                            skills with projects in HTML, CSS, and JavaScript.
+                            It's suitable for all levels and ideal for
+                            portofolio building.
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="box__item py-lg border-solid border-0 border-b-2 border-light-pink last:pb-0 last:border-b-0"
+                    data-index="4"
+                    x-ref="accordionItem4"
+                >
+                    <div
+                        class="header group flex items-center justify-between gap-lg"
+                        @click="setIndex($el)"
+                    >
+                        <h2
+                            class="text-md text-dark-purple font-semibold group-hover:text-purple group-hover:font-bold"
+                        >
+                            How can I get help if I'm stuck on a challenge?
+                        </h2>
+                        <div class="icon">
+                            <img
+                                src="./assets/images/icon-minus.svg"
+                                alt=""
+                                :src="show == $refs.accordionItem4.dataset.index ? './assets/images/icon-minus.svg' : './assets/images/icon-plus.svg' "
+                            />
+                        </div>
+                    </div>
+                    <div
+                        class="content max-h-0 overflow-hidden transition-all duration-500"
+                        :style="show == $refs.accordionItem4.dataset.index ? `max-height: ${$el.scrollHeight}px` : 'max-height: `0px` ' "
+                    >
+                        <p class="text-sm pt-lg text-grayish-purple leading-6">
+                            Frontend Mentor offers realistic coding challenges
+                            to help developers improve their frontend coding
+                            skills with projects in HTML, CSS, and JavaScript.
+                            It's suitable for all levels and ideal for
+                            portofolio building.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="attribution my-4">
+            Challenge by
+            <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+            >
+                Frontend Mentor
+            </a>
+            . Coded by
+            <a href="#">Annas Dwi</a>
+            .
+        </div>
+    </body>
 </html>

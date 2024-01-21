@@ -1,0 +1,14 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+
+/* RESET */
+@import url('./css/ress.min.css');
+
+/* UNO.CSS */
+[un-cloak] {
+    display: none;
+}
+
+* {
+    font-family: 'Work Sans', sans-serif;
+}
