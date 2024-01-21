@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
--   Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-   Solution URL: [Here](https://github.com/anasdwc/frontend-mentor/tree/main/newbie/3-faq-accordion-main)
+-   Live Site URL: [Here](https://classy-hotteok-92ac70.netlify.app/)
 
 ## My process
 
